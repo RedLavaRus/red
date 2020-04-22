@@ -1,0 +1,6 @@
+<?php
+   $guard = new Guard;
+
+   echo $guard->hashpassf('vlada2002',4,"482fe9a1c05d58ad");
+   echo '<br>';
+?>
