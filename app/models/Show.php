@@ -1,7 +1,7 @@
 <?php
 class Show
 {
-    public function way($file = 'index',$lay = 'layout',$folder = 'resources')
+    public  static  function way($file = 'index',$lay = 'layout',$folder = 'resources')
     {
         $file = $file.'.wei.php';
         $lay = $lay.'.wei.php';

@@ -20,22 +20,7 @@ $fon_nam = rand(1,7);
 <body>
 
 <div class="line1">
-    <div class="line1_head_menu">
-        <div class="line1_head_menu_logo"><a href="/">SkyVoxel</a></div>
-        <div class="line1_head_menu_logo1"><a href="/shop/">Магазин</a></div>
-        <div class="line1_head_menu_logo1"><a href="/servers/">Сервера</a></div>
-        <div class="line1_head_menu_logo1"><a href="/trade/">Рынок</a></div>
-        <div class="line1_head_menu_logo1"><a href="/banlist/">Бан лист</a></div>
-        <div class="line1_head_menu_auth">
-            <img src="/profile/avatar/default.jpeg" class="ava_l1" alt="avatarka">
-            <div class="line1_head_menu_auth_text">
-
-                Вы вошли как,<br>
-                Логин<br>
-                <div class="line1_head_menu_auth_text_1">Личный кабинет</div>
-            </div>
-        </div>
-    </div>
+    <?php include CFG::adres()."resources/box/header.php"; ?>
     
     <div class="name_projekt_innmain">SkyVoxel</div>
     <div class="name_projekt_innmain_d">Мир в котором можно повеселиться!</div>

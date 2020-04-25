@@ -2,28 +2,47 @@
 class Navigator
 {
   //way($file = 'index',$lay = 'layout',$folder = 'resources')
-  public function index(){
+  public static function index(){
     Show::way('index','layout');
   }
-  public function shop(){
+  public static  function shop(){
     Show::way('shop','layout');
   }
-  public function servers(){
+  public  static function servers(){
     Show::way('servers','layout');
   }
-  public function trade(){
+  public static  function trade(){
     Show::way('trade','layout');
   }  
-  public function banlist(){
+  public static  function banlist(){
     Show::way('banlist','layout');
   }
-  public function lc(){
+  public static  function lc(){
     Show::way('lc','layout');
   }
-  public function start(){
+  public  static function start(){
     Show::way('start','layout');
   }
-  public function test(){
+  public static  function auth(){
+    Show::way('auth','layoutauth');
+  }
+  public  static function reg(){
+    Show::way('reg','layoutauth');
+  }
+  public static  function e404(){
+    Show::way('e404','error');
+  }
+
+
+
+
+
+
+
+
+
+
+  public static  function test(){
     Show::way('test','layout');
   }
 }

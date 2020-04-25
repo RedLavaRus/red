@@ -1,29 +1,34 @@
 <?php
 class CFG
 {
-    public function adres()
+    
+    public static function adres()
     {
         return '/home/redlava/developer/web/adj/red/';//Путь до корня сайта
     }
-    public function secred()
+    public static  function secred()
     {
         return 'NpfWqEmcsMRyRxJWBZgv3DTiOEPVSIkBG9dbpGPP';//Секретный ключ!
     }
-    public function DBhost()
+    public static  function DBhost()
     {
         return 'localhost';
     }    
-    public function DBname()
+    public static  function DBname()
     {
         return 'skyvoxel';
     }    
-    public function DBuser()
+    public static  function DBuser()
     {
         return 'ph';
     }    
-    public function DBpass()
+    public static  function DBpass()
     {
         return 'ph1234PH';
+    }
+    public static  function BD_table_user()
+    {
+        return 'users';
     }
 }
 

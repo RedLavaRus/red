@@ -1,313 +1,370 @@
 @font-face {
-  font-family: "main";
-  src: url("/thems/fonts/AvanteInt.ttf") format("truetype");
+    font-family: "main";
+    src: url("/thems/fonts/AvanteInt.ttf") format("truetype");
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "main";
-  min-width: 1200px;
-  background-color: #e6fdfc;
+    margin: 0;
+    padding: 0;
+    font-family: "main";
+    min-width: 1200px;
+    background-color: #fff;
+    background: url("/thems/img/fon/fon.png");
+    background-position: 0 150%;
 }
 
 .line1 {
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
 }
 
 .line1_head_menu {
-  background-color: #0e1c1f;
-  width: 100%;
-  height: 86px;
-  display: flex;
-  flex-wrap: wrap;
+    background-color: #0e1c1f;
+    width: 100%;
+    height: 86px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .line1_head_menu_logo {
-  font-size: 36px;
-  color: #fff;
-  padding: 20px 0 0 40px;
-  flex-grow: 1;
-  justify-content: center;
+    font-size: 36px;
+    color: #fff;
+    padding: 20px 0 0 40px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .line1_head_menu_logo1 {
-  font-size: 24px;
-  color: #fff;
-  padding: 30px 30px 0 30px;
-  margin-left: auto;
-  flex-shrink: 0;
-  flex-grow: 0;
+    font-size: 24px;
+    color: #fff;
+    padding: 30px 30px 0 30px;
+    margin-left: auto;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .line1_head_menu_auth {
-  font-size: 24px;
-  color: #fff;
-  padding: 16px 40px 0 60px;
-  margin-left: auto;
-  flex-shrink: 0;
-  flex-grow: 0;
-  display: flex;
-  flex-wrap: wrap;
+    font-size: 24px;
+    color: #fff;
+    padding: 16px 40px 0 60px;
+    margin-left: auto;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ava_l1 {
-  width: 48px;
-  height: 48px;
-  border-radius: 25px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  margin: 0 10px 0 0;
-  border: solid #fefefe 3px;
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 0 10px 0 0;
+    border: solid #fefefe 3px;
 }
 
 .line1_head_menu_auth_text {
-  font-size: 14px;
-  color: #fff;
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: 150px;
-  margin: 0 0px 0 20px;
+    font-size: 14px;
+    color: #fff;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 150px;
+    margin: 0 0px 0 20px;
 }
 
 .line1_head_menu_auth_text_1 {
-  padding: 5px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 .name_projekt_innmain {
-  color: #0e1c1f;
-  width: 100%;
-  text-align: center;
-  margin: 20vh 0 0 0;
-  font-size: 78px;
+    color: #0e1c1f;
+    width: 100%;
+    text-align: center;
+    margin: 20vh 0 0 0;
+    font-size: 78px;
 }
 
 .name_projekt_innmain_d {
-  color: #0e1c1f;
-  width: 100%;
-  text-align: center;
-  margin: 3vh 0 0 0;
-  font-size: 48px;
+    color: #0e1c1f;
+    width: 100%;
+    text-align: center;
+    margin: 3vh 0 0 0;
+    font-size: 48px;
 }
 
 .name_projekt_innmain_b {
-  color: #fefefe;
-  text-align: center;
-  margin: 10vh calc(50% - 180px) 0 calc(50% - 180px);
-  font-size: 36px;
-  padding: 10px 30px;
-  background-color: #0e1c1f;
-  border-radius: 10px;
-  width: 300px;
+    color: #fefefe;
+    text-align: center;
+    margin: 10vh calc(50% - 180px) 0 calc(50% - 180px);
+    font-size: 36px;
+    padding: 10px 30px;
+    background-color: #0e1c1f;
+    border-radius: 10px;
+    width: 300px;
 }
 
 .name_projekt_innmain_b:hover {
-  background-color: #15292e;
+    background-color: #15292e;
 }
 
 .line_box {
-  background: url("/thems/img/blochline.png") no-repeat;
-  background-size: cover, cover;
-  width: 100%;
-  height: 159px;
-  margin: -159px 0 0 0;
+    background: url("/thems/img/blochline.png") no-repeat;
+    background-size: cover, cover;
+    width: 100%;
+    height: 159px;
+    margin: -159px 0 0 0;
 }
 
 .line2 {
-  width: 100%;
-  background-color: #e6fdfc;
+    width: 100%;
 }
 
 .golos_block {
-  width: 80%;
-  margin: 10vh 10%;
-  display: flex;
-  justify-content: center;
+    width: 80%;
+    margin: 10vh 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .server_block {
-  width: 280px;
-  height: 500px;
-  background: #fff;
-  margin: 10vh auto;
-  box-shadow: 0 0 10px 10px #c4c4c4;
-  border-radius: 5px;
+    width: 280px;
+    height: 500px;
+    background: #fff;
+    margin: 10vh auto;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    border-radius: 5px;
 }
 
 .server_spawn_img {
-  background: url("http://skyvoxel/img/spawn1.png");
-  height: 200px;
-  width: 280px;
-  border-radius: 5px 5px 0 0;
+    background: url("http://skyvoxel/img/spawn1.png");
+    height: 200px;
+    width: 280px;
+    border-radius: 5px 5px 0 0;
 }
 
 .server_spawn_nameserver {
-  font-size: 36px;
-  color: #fff;
-  text-align: center;
-  padding: 50px 0 0 0;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 0 0;
 }
 
 .server_spawn_serverico_block {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  box-shadow: 0 0 20px 3px #4d4c4c;
-  border-radius: 50px;
-  margin: 30px auto;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 3px #4d4c4c;
+    border-radius: 50px;
+    margin: 30px auto;
 }
 
 .server_spawn_serverico_block img {
-  margin: 18px;
+    margin: 18px;
 }
 
 .server_spawn_server_string {
-  width: 220px;
-  text-align: center;
-  margin: 10px 30px;
-  padding: 10px 0;
-  font-size: 20px;
-  border-bottom: 1px solid #ccc;
+    width: 220px;
+    text-align: center;
+    margin: 10px 30px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
 .server_spawn_server_button {
-  width: 100px;
-  padding: 10px 20px;
-  margin: 20px auto 1px auto;
-  border: 1px solid #0e1c1f;
-  border-radius: 50px;
-  text-align: center;
+    width: 100px;
+    padding: 10px 20px;
+    margin: 20px auto 1px auto;
+    border: 1px solid #0e1c1f;
+    border-radius: 50px;
+    text-align: center;
 }
 
 .line3 {
-  width: 100%;
+    width: 100%;
 }
 
 .line3_head {
-  width: 100%;
-  text-align: center;
-  font-size: 48px;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
 }
 
 .news_baner {
-  width: 129vh;
-  height: 80vh;
-  margin: 8vh auto 10vh auto;
+    width: 129vh;
+    height: 80vh;
+    margin: 8vh auto 10vh auto;
 }
 
 .news_item img {
-  width: 129vh;
-  height: 80vh;
+    width: 129vh;
+    height: 80vh;
 }
 
 .block_golosovaniya {
-  width: 80%;
-  min-width: 1200px;
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
+    width: 80%;
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
 }
 
 .block_golosovaniya_item {
-  width: 250px;
-  height: 280px;
-  background-color: #fff;
-  margin: 20px auto 10px auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 10px #c4c4c4;
-  background-color: #ecf5fd;
+    width: 250px;
+    height: 280px;
+    background-color: #fff;
+    margin: 20px auto 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    background-color: #ecf5fd;
 }
 
 .block_golosovaniya_item_img {
-  width: 100px;
-  height: 100px;
-  margin: 30px auto;
-  box-shadow: 0 0 10px 10px #c4c4c4;
-  border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    border-radius: 50px;
 }
 
 .block_golosovaniya_item_img img {
-  width: 64px;
-  height: 64px;
-  margin: 18px;
+    width: 64px;
+    height: 64px;
+    margin: 18px;
 }
 
 .name_top_gol_proj {
-  font-size: 24px;
-  width: 100%;
-  text-align: center;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
 }
 
 .name_top_gol_proj_button {
-  width: 100px;
-  padding: 10px 20px;
-  margin: 20px auto 1px auto;
-  border: 1px solid #0e1c1f;
-  border-radius: 50px;
-  text-align: center;
+    width: 100px;
+    padding: 10px 20px;
+    margin: 20px auto 1px auto;
+    border: 1px solid #0e1c1f;
+    border-radius: 50px;
+    text-align: center;
 }
 
 .block_golosovaniya_top {
-  width: 80%;
-  min-width: 1200px;
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
+    width: 80%;
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
 }
 
 .block_golosovaniya_top2 {
-  width: 250px;
-  height: 250px;
-  padding: 25px;
+    width: 250px;
+    height: 250px;
+    padding: 25px;
 }
 
 .block_golosovaniya_top1 {
-  width: 280px;
-  height: 280px;
-  padding: 10px;
+    width: 280px;
+    height: 280px;
+    padding: 10px;
 }
 
 .namber {
-  width: 100%;
-  text-align: center;
-  font-size: 21px;
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
 }
 
 .block_golosovaniya_opisa p {
-  width: 80%;
-  font-size: 14px;
-  margin: 0 auto;
-  text-align: justify;
+    width: 80%;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .footer {
-  width: 100%;
-  height: 400px;
-  background-color: #0e1c1f;
+    width: 100%;
+    height: 400px;
+    background-color: #0e1c1f;
 }
 
 .footer_block {
-  width: 1200px;
-  height: 400px;
-  margin: 0 auto;
-  color: #fff;
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    color: #fff;
 }
 
 .footer_block_left {
-  float: left;
-  margin: 50px 0 0 0;
+    float: left;
+    margin: 50px 0 0 0;
 }
 
 .footer_block_right {
-  float: right;
-  margin: 50px 0 0 0;
-  width: 200px;
+    float: right;
+    margin: 50px 0 0 0;
+    width: 200px;
 }
 
+.auth_form {
+    width: 500px;
+    margin: 100px auto;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    border-radius: 9px;
+    background: url('/thems/img/formfon.jpg');
+    background-color: rgba(0, 50, 50, 0.5);
+}
+
+.auth_form_head {
+    display: flex;
+    padding: 10px 10px;
+    font-size: 21px;
+}
+
+.auth_form_head_l {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: #777;
+}
+
+.auth_form_head_l_activ {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.login_form {
+    margin: 20px 0 0 0;
+}
+
+.login_form_input {
+    width: 280px;
+    margin: 12px 90px;
+    font-size: 18px;
+    padding: 5px 5px 5px 30px;
+    border-radius: 40px;
+    border: 2px solid #999;
+    background-color: #bbb;
+}
+
+.login_form_but {
+    width: 315px;
+    font-size: 18px;
+    border-radius: 40px;
+    border: 2px solid rgb(82, 82, 82);
+    background-color: #bbb;
+    margin: 12px 90px 30px 90px;
+    height: 38px;
+}
+
+.auth_form p {
+    padding: 10px 30px;
+    font-size: 12px;
+}
