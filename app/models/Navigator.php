@@ -18,7 +18,7 @@ class Navigator
     Show::way('banlist','layout');
   }
   public static  function lc(){
-    Show::way('lc','layout');
+    Show::way('lc','layoutlc');
   }
   public  static function start(){
     Show::way('start','layout');

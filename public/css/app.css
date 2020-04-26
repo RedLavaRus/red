@@ -368,3 +368,34 @@ body {
     padding: 10px 30px;
     font-size: 12px;
 }
+
+.line1_lc {
+    width: 100%;
+}
+
+.lc_box {
+    width: 100%;
+    min-width: 1200px;
+    display: flex;
+}
+
+.lc_box_menu {
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.lc_box_mine {
+    flex: auto;
+    padding: 10px;
+}
+
+.lc_box_menu_element {
+    padding: 10px 0 10px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.lc_box_menu_el1 {
+    min-height: 10px;
+    min-width: 10px;
+}
