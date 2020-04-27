@@ -9,6 +9,7 @@ include_once 'models/Navigator.php';
 include_once 'models/DB.php';
 
 include_once 'models/Guard.php';
+include_once 'models/Seo.php';
 include_once 'models/Router.php';
 include_once 'models/Show.php';
 include_once 'models/Auth.php';

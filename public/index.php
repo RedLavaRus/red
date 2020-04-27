@@ -2,6 +2,7 @@
 
 include_once '../app/core.php';
 
+
 $gl='';
 $gl=$gl . Router::get('/','Navigator@index');
 $gl=$gl . Router::get('/shop','Navigator@shop');

@@ -6,7 +6,8 @@ class Show
         $file = $file.'.wei.php';
         $lay = $lay.'.wei.php';
         
-       
+        $seo = Seo::prints(DB::pdo());
+        
         include CFG::adres().$folder.'/'.$file;
         include CFG::adres().$folder.'/'.$lay;
         

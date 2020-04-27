@@ -5,7 +5,9 @@ $fon_nam = rand(1,7);
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title><?php echo $seo['title'];?></title>
+    <meta name="description" content="<?php echo $seo['desk'];?>"> 
+    <meta name="Keywords" content="<?php echo $seo['keyw'];?>"> 
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/css/app.css" >
     <style>
