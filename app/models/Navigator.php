@@ -30,7 +30,10 @@ class Navigator
     Show::way('reg','layoutauth');
   }
   public static  function e404(){
-    Show::way('e404','error');
+    Show::way('e404','layouterror');
+  }
+  public static  function serversName($gets){
+    Show::way('servers','layout',$gets);
   }
 
 

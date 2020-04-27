@@ -18,6 +18,7 @@ $gl=$gl . Router::get('/reg','Navigator@reg');
 
 $gl=$gl . Router::get('/test','Navigator@test');
 
+$gl=$gl . Router::getVar('/servers/?','Navigator@serversName');
 
 
 if($gl != "sys"){Router::get('e404','Navigator@e404');}
