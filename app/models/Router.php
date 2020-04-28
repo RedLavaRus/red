@@ -32,18 +32,24 @@ class Router
         Show::way('e404','layouterror');
         return;
       }
+      // надо сравнить $pattern и текущий параметр юрл.
       $url = explode('/', $pattern);
-      if($url[2] == '?')
+      $res_url = explode('/',$_SERVER['REQUEST_URI']);
+      
+      if(($url[1] ==  $res_url[1]) && $res_url[2] != '')
       {
         $url = explode('/', $pattern);
-        $res_url = explode('/',$_SERVER['REQUEST_URI']);
-        $func = explode('@', $func);
+        if($url[2] == '?')
+          {
+            
+            $func = explode('@', $func);
 
-        $cla_na = $func[0];
-        $fun_na = $func[1];
+            $cla_na = $func[0];
+            $fun_na = $func[1];
 
-        $cla_na::$fun_na($res_url[2]);
-        return "sys";
+            $cla_na::$fun_na($res_url[2]);
+            return "sys";
+          }
       }
       
 

@@ -1,6 +1,11 @@
 <?php
 include CFG::adres()."/function/McServerConfig.php";
-include CFG::adres()."/function/McServerOpis.php";
+$res_url = explode('/',$_SERVER['REQUEST_URI']);
+$servres_opis_info_dd_r='';
+if (isset($res_url[2]) && $res_url[2]!= '') 
+{
+    include CFG::adres()."/function/McServerOpis.php";
+}
 //echo $on_col_server = 109;
 
  $yacheek_serverov = $on_col_strok_ost = $on_col_server % 3;
@@ -56,7 +61,9 @@ $content = '
         '
 
     </div>
-    '.$opisanie_servera. $servres_opis_info_dd_r.'
+    '.$opisanie_servera. 
+    $servres_opis_info_dd_r
+    .'
 
     ';
 ?>
