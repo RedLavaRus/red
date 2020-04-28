@@ -1,5 +1,6 @@
 <?php
 include CFG::adres()."/function/McServerConfig.php";
+include CFG::adres()."/function/McServerOpis.php";
 //echo $on_col_server = 109;
 
  $yacheek_serverov = $on_col_strok_ost = $on_col_server % 3;
@@ -55,7 +56,7 @@ $content = '
         '
 
     </div>
-    '.$opisanie_servera.$keysPage.'
-    
+    '.$opisanie_servera. $servres_opis_info_dd_r.'
+
     ';
 ?>
