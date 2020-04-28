@@ -1,8 +1,8 @@
 <?php
 $Servers_config = array(
     //array('НАЗВАНИЕ','ИП','ПОРТ','СТАТУС','ОНЛАИН',"НАКРУТКА",'max online',"img")
-    array('VANILA','pandamc.ru','25565','status','0','0','100','serv1.png'),
-    array('TEHNO WAR','s2.topmc.site','25565','status','0','0','100','serv1.png')
+    array('ANARHIYA','pandamc.ru','25565','status','0','0','100','serv1.png'),
+    array('ClanWars','s2.topmc.site','25565','status','0','0','100','serv1.png')
   );
   $i=0;
   $on_total=0;

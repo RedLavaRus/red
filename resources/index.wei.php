@@ -34,7 +34,7 @@ $serv_echo='';
                 <div class="server_spawn_server_string">'. $onl_serv_ehc.'</div>
                 <div class="server_spawn_server_string">ip: '.$Servers_config["$zz"]['1'].'</div>
                 <div class="server_spawn_server_string">Магазин</div>
-                <div class="server_spawn_server_button">О сервере</div>
+                <div class="server_spawn_server_button"><a href="/servers/'.$Servers_config["$zz"]['0'].'/#server">О сервере</a></div>
             </div>
         </div>';
 

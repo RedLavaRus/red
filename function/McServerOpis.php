@@ -11,7 +11,7 @@
         
         $servres_opis_info_dd_r=
         '
-        <div class="opis_serv_s1">
+        <div class="opis_serv_s1" id="server">
         <div class="opis_serv_h1" id="opis">Сервер: '.$server_array_dd['serverName'].'</div><br>
         <hr>
         <p>'.$server_array_dd['opisanie'].'</p>
