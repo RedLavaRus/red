@@ -492,3 +492,62 @@ body {
 .opis_serv_tabl_el_text1 {
     font-size: 18px;
 }
+
+.download_h3 {
+    width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    font-size: 48px;
+}
+
+.download_block {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    display: flex;
+}
+
+.download_block_small {
+    flex: 1;
+    margin: 20px 60px;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    min-height: 300px;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #fff;
+}
+
+.download_block_small_img {
+    height: 130px;
+    z-index: 5;
+    padding: 60px 0 0 0;
+    background: #fff;
+    background-size: 50%;
+    text-align: center;
+    color: #fefefe;
+    font-size: 24px;
+    border-radius: 5px 5px 0 0;
+    background-position: center;
+    background-size: 300px;
+}
+
+.download_block_ico {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 10px auto 0 auto;
+    background: #eee;
+    z-index: 2;
+    box-shadow: 0 0 5px 2px #a1a1a1;
+}
+
+.download_block_ico1img {
+    width: 58px;
+    padding: 21px;
+}
+
+.download_block_text {
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+    line-height: 1.7;
+}
