@@ -54,17 +54,21 @@ class Router
     }
     public static function ajax($pattern,$func,$sl = 0,$col = 0)
     {
-     
-          $func = explode('@', $func);
+          $res_url = explode('/',$_SERVER['REQUEST_URI']);
+          
+          if ($res_url[1] == 'function' && $res_url[2]==$sl) 
+          {
+              $func = explode('@', $func);
 
-          $cla_na = $func[0];
-          $fun_na = $func[1];
+              $cla_na = $func[0];
+              $fun_na = $func[1];
 
-          $cla_na::$fun_na();
+              $cla_na::$fun_na();
       
           
       
-      return "sys";
+              return "sys";
+          }
     }
 }
 ?>
