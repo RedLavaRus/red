@@ -1,7 +1,7 @@
 <?php
 class Show
 {
-    public  static  function way($file = 'index',$lay = 'layout',$gets ='',$folder = 'resources')
+    public  static  function way($file = 'index',$lay = 'layout',$gets ='',$folder = 'resources',$folderLayout = 'resources')
     {
         if ($gets =='') 
         {
@@ -9,7 +9,7 @@ class Show
             $lay = $lay.'.wei.php';        
             $seo = Seo::prints(DB::pdo());        
             include CFG::adres().$folder.'/'.$file;
-            include CFG::adres().$folder.'/'.$lay;         
+            include CFG::adres().$folderLayout.'/'.$lay;         
             return true;
         }
         else
@@ -19,7 +19,7 @@ class Show
             $seo = Seo::prints(DB::pdo()); 
             $keysPage = $gets;
             include CFG::adres().$folder.'/'.$file;
-            include CFG::adres().$folder.'/'.$lay;         
+            include CFG::adres().$folderLayout.'/'.$lay;         
             return true;
 
         }

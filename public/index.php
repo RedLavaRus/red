@@ -21,5 +21,10 @@ $gl=$gl . Router::get('/test','Navigator@test');
 $gl=$gl . Router::getVar('/servers/?','Navigator@serversName');
 
 
+
+if ($gl !="sys") 
+{
+    $gl=$gl . Router::ajax('/function/online', 'Navigator@servereOnline', 'online', '1');
+}
 if($gl != "sys"){Router::get('e404','Navigator@e404');}
 ?>

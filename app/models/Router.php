@@ -51,9 +51,20 @@ class Router
             return "sys";
           }
       }
-      
-
     }
-   
+    public static function ajax($pattern,$func,$sl = 0,$col = 0)
+    {
+     
+          $func = explode('@', $func);
+
+          $cla_na = $func[0];
+          $fun_na = $func[1];
+
+          $cla_na::$fun_na();
+      
+          
+      
+      return "sys";
+    }
 }
 ?>

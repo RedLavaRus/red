@@ -7,6 +7,7 @@
     <title><?php echo $seo['title'];?></title>
     <meta name="description" content="<?php echo $seo['desk'];?>"> 
     <meta name="Keywords" content="<?php echo $seo['keyw'];?>"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 <div class="line1">

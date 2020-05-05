@@ -36,6 +36,12 @@ class Navigator
     Show::way('servers','layout',$gets);
   }
 
+  public static  function servereOnline(){
+    Show::way('onlineShow','layoutnone','','resources/pageAjaxShow');
+  }
+  
+  
+
 
 
 
