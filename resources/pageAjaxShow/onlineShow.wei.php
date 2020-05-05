@@ -60,5 +60,9 @@ while($strok_serverov != $yy)
 }
 
     echo $serv_echo;
+/*
+Загрузка в бд.
+*/
+ServerOnline::add($Servers_config);
 
 ?>

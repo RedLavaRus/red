@@ -16,5 +16,5 @@ include_once 'models/Auth.php';
 include_once 'models/Reg.php';
 
 include_once 'models/McStatusServer.php';
-
+include_once 'models/ServerOnline.php';
 ?>
