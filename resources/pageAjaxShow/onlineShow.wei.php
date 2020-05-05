@@ -48,14 +48,38 @@ while($strok_serverov != $yy)
                <div class="server_spawn_server_button"><a href="/servers/'.$Servers_config["$zz"]['0'].'/#server">О сервере</a></div>
            </div>
        </div>';
-
+       $total_onl_rec=ServerOnline::show();
            $tx++;
            $on_col_server--;
            $zz++;
        }
+       $total_onl_tek=0;
+       $xx=0;
+       while($xx != 9)
+       {
+           if (!isset($Servers_config["$xx"][4])) 
+           {
+               $Servers_config["$xx"][4] = 0;
+           }
+           $total_onl_tek = $total_onl_tek + $Servers_config["$xx"][4];
+           $xx++;
 
+       }
 
-   $serv_echo =$serv_echo .'</div>';
+   $serv_echo =$serv_echo .'</div>
+   <div class="server_total">
+       <div class="server_total_item">
+       <div class="server_total_head">Общий онлаин:</div>
+       <div class="server_total_text">'.$total_onl_tek .'</div>
+       </div>
+       <div class="server_total_item">
+       <div class="server_total_head">Рекорд онлаин:</div>
+       <div class="server_total_text">'.$total_onl_rec .'</div>
+       </div>
+   </div>
+   
+   
+   ';
    $yy++;
 }
 

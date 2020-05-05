@@ -551,3 +551,22 @@ body {
     text-align: center;
     line-height: 1.7;
 }
+
+.server_total {
+    width: 1200px;
+    margin: 0 auto 200px auto;
+    display: flex;
+}
+
+.server_total_item {
+    flex: 1;
+    text-align: center;
+}
+
+.server_total_head {
+    font-size: 42px;
+}
+
+.server_total_text {
+    font-size: 38px;
+}

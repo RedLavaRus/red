@@ -1,7 +1,8 @@
 <?php
 class ServerOnline
 {
-    public static function add($online){
+    public static function add($online)
+    {
 
         $server_time = time();
         //echo $server_time;
@@ -29,6 +30,13 @@ class ServerOnline
         `totalOnline` = ?"
         );
         $sth1->execute(array($server_time,$online[0][4],$online[1][4],$online[2][4],$online[3][4],$online[4][4],$online[5][4],$online[6][4],$online[7][4],$online[8][4],$total));
+    }
+    public static function show()
+    {
+        $sth = DB::pdo()->prepare("SELECT * FROM `serversOnlines` ORDER BY `totalOnline` DESC limit 1");
+        $sth->execute(array());
+        $array = $sth->fetch(PDO::FETCH_ASSOC);
+        return  $array['totalOnline'];
     }
 
 }
