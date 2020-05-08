@@ -10,6 +10,7 @@ $gl=$gl . Router::get('/servers','Navigator@servers');
 $gl=$gl . Router::get('/trade','Navigator@trade');
 $gl=$gl . Router::get('/banlist','Navigator@banlist');
 $gl=$gl . Router::get('/lc','Navigator@lc');
+$gl=$gl . Router::get('/lc/inventar','Navigator@lcinventar');
 $gl=$gl . Router::get('/start','Navigator@start');
 
 $gl=$gl . Router::get('/login','Navigator@auth');

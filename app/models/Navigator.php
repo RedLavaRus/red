@@ -20,6 +20,9 @@ class Navigator
   public static  function lc(){
     Show::way('lc','layoutlc');
   }
+  public static  function lcinventar(){
+    Show::way('lcinventar','layoutlc');
+  }
   public  static function start(){
     Show::way('start','layout');
   }

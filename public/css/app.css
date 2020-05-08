@@ -396,8 +396,9 @@ body {
 }
 
 .lc_box_menu_el1 {
-    min-height: 10px;
+    min-height: 20px;
     min-width: 10px;
+    border-top: 1px solid #ddd;
 }
 
 .tab_banlist {
@@ -569,4 +570,82 @@ body {
 
 .server_total_text {
     font-size: 38px;
+}
+
+.lc_head_h3 {
+    padding: 10px 0 20px 30px;
+    font-size: 24px;
+}
+
+.lc_inventar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.lc_inventar_item {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    height: 100px;
+    flex: 1;
+    margin: 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    border-radius: 5px;
+    border: 2px solid #787878;
+    background-color: #e9e9e9;
+}
+
+.lc_inventar_item img {
+    width: 64px;
+    height: 64px;
+    margin: 8px 18px 2px 18px;
+}
+
+.lc_inventar_item_kol {
+    margin: -10px 30px;
+    border: 2px solid #777;
+    padding: 2px 1px 0px 1px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#rar1 {
+    border: 2px solid #555;
+    background-color: #e9e9e9;
+}
+
+#rar2 {
+    border: 2px solid #69c70d;
+    background-color: #c0e89a;
+}
+
+#rar3 {
+    border: 2px solid #0214c1;
+    background-color: #a3a6c6;
+}
+
+#rar4 {
+    border: 2px solid #6d00dd;
+    background-color: #caa5ef;
+}
+
+#rar5 {
+    border: 2px solid #ce08d5;
+    background-color: #f3bbf5;
+}
+
+#rar6 {
+    border: 2px solid #da1414;
+    background-color: #f1afaf;
+}
+
+#rar7 {
+    border: 2px solid #f6d51e;
+    background-color: #fdf1ae;
 }
