@@ -17,4 +17,7 @@ include_once 'models/Reg.php';
 
 include_once 'models/McStatusServer.php';
 include_once 'models/ServerOnline.php';
+
+
+include_once 'models/Inventar.php';
 ?>

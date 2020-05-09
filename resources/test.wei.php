@@ -7,8 +7,7 @@
    */
 
   //Auth::authriz(DB::pdo(), 'ribaaa','vlada2002',1);
-  include CFG::adres()."/install/Migration.php";
-  Migration::users(DB::pdo());
+print_r(Inventar::ShowServerItem(1));
 
 
 //  }

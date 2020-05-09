@@ -2,21 +2,21 @@
 
 include CFG::adres()."/function/McServerConfig.php";
 
+$invMasterArray = Inventar::ShowServerItem(1);
+$contentItemsShow ='';
+foreach($invMasterArray as $invMasteritem)
+{
+$timed_x = '<div class="lc_inventar_item" id="rar'.$invMasteritem['rar'].'">';
+$timed_x1 = '<img src="/img/items/'.$invMasteritem['gl_id'].'.png">';
+$timed_x2 = '<div class="lc_inventar_item_kol">'.$invMasteritem['collich'].'</div></div>';
+$contentItemsShow = $contentItemsShow .$timed_x.$timed_x1.$timed_x2;
+}
+
+//$ttt=$_SESSION['id'];//3
 $content = '
  <h3 class="lc_head_h3"> Инвентарь сервера '.$Servers_config[0][0].'</h3>
 <div class="lc_inventar">
-    <div class="lc_inventar_item" id="rar1"><img src="/img/items/1.png"><div class="lc_inventar_item_kol">862</div></div>
-    <div class="lc_inventar_item" id="rar2"><img src="/img/items/2.png"><div class="lc_inventar_item_kol">62</div></div>
-    <div class="lc_inventar_item" id="rar3"><img src="/img/items/4.png"><div class="lc_inventar_item_kol">112</div></div>
-    <div class="lc_inventar_item" id="rar4"><img src="/img/items/2.png"><div class="lc_inventar_item_kol">2</div></div>
-    <div class="lc_inventar_item" id="rar5"><img src="/img/items/1.png"><div class="lc_inventar_item_kol">1</div></div>
-    <div class="lc_inventar_item" id="rar6"><img src="/img/items/1.png"><div class="lc_inventar_item_kol">62</div></div>
-    <div class="lc_inventar_item" id="rar7"><img src="/img/items/3.png"><div class="lc_inventar_item_kol">1862</div></div>
-    <div class="lc_inventar_item"><img src="/img/items/2.png"><div class="lc_inventar_item_kol">862</div></div>
-    <div class="lc_inventar_item"><img src="/img/items/1.png"><div class="lc_inventar_item_kol">862</div></div>
-    <div class="lc_inventar_item"><img src="/img/items/4.png"><div class="lc_inventar_item_kol">862</div></div>
-    <div class="lc_inventar_item"><img src="/img/items/3.png"><div class="lc_inventar_item_kol">862</div></div>
-    <div class="lc_inventar_item"><img src="/img/items/4.png"><div class="lc_inventar_item_kol">862</div></div>
+'.$contentItemsShow.'
 </div>
 
 

@@ -55,7 +55,7 @@ class Navigator
     Show::way('lcInventarS9','layoutlc');
   }
   public static  function lcInventarS10(){
-      Show::way('lcInventarS10', 'layoutlc');
+    Show::way('lcInventarS10', 'layoutlc');
   }
 
   public  static function start(){
