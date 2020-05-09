@@ -55,8 +55,9 @@ class Router
     public static function ajax($pattern,$func,$sl = 0,$col = 0)
     {
           $res_url = explode('/',$_SERVER['REQUEST_URI']);
+          $funct_names = explode('?', $res_url[2]);
           
-          if ($res_url[1] == 'function' && $res_url[2]==$sl) 
+          if ($res_url[1] == 'function' && $funct_names[0]==$sl) 
           {
               $func = explode('@', $func);
 

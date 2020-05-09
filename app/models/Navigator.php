@@ -77,6 +77,9 @@ class Navigator
   public static  function servereOnline(){
     Show::way('onlineShow','layoutnone','','resources/pageAjaxShow');
   }
+  public static  function servereRcom(){
+    Show::way('giveShow','layoutnone','','resources/pageAjaxShow');
+  }
   
   
 
