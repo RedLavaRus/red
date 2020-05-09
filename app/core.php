@@ -20,4 +20,5 @@ include_once 'models/ServerOnline.php';
 
 
 include_once 'models/Inventar.php';
+include_once 'models/Rcom.php';
 ?>

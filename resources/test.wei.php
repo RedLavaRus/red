@@ -7,9 +7,24 @@
    */
 
   //Auth::authriz(DB::pdo(), 'ribaaa','vlada2002',1);
-print_r(Inventar::ShowServerItem(1));
+  $host = 'localhost';
+  $port = 25575;
+  $password = 'dfgkjsnnIOU83432NJK';
+  $timeout=3;
 
-
+  $rcon = new Rcon($host, $port, $password, $timeout);
+  
+  if ($rcon->connect())
+  {
+    $res = $rcon->sendCommand("list");
+  }
+  else
+  {
+    echo "error";
+  }
+  echo $res;
+  echo "<br><br><br><br>";
+  print_r($res);
 //  }
 
 ?>
