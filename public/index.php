@@ -10,7 +10,22 @@ $gl=$gl . Router::get('/servers','Navigator@servers');
 $gl=$gl . Router::get('/trade','Navigator@trade');
 $gl=$gl . Router::get('/banlist','Navigator@banlist');
 $gl=$gl . Router::get('/lc','Navigator@lc');
-$gl=$gl . Router::get('/lc/inventar','Navigator@lcinventar');
+
+$gl=$gl . Router::get('/lc/inventar/items','Navigator@lcInventarItem');
+$gl=$gl . Router::get('/lc/inventar/money','Navigator@lcInventarMoney');
+$gl=$gl . Router::get('/lc/inventar/s1','Navigator@lcInventarS1');
+$gl=$gl . Router::get('/lc/inventar/s2','Navigator@lcInventarS2');
+$gl=$gl . Router::get('/lc/inventar/s3','Navigator@lcInventarS3');
+$gl=$gl . Router::get('/lc/inventar/s4','Navigator@lcInventarS4');
+$gl=$gl . Router::get('/lc/inventar/s5','Navigator@lcInventarS5');
+$gl=$gl . Router::get('/lc/inventar/s6','Navigator@lcInventarS6');
+$gl=$gl . Router::get('/lc/inventar/s7','Navigator@lcInventarS7');
+$gl=$gl . Router::get('/lc/inventar/s8','Navigator@lcInventarS8');
+$gl=$gl . Router::get('/lc/inventar/s9','Navigator@lcInventarS9');
+$gl=$gl . Router::get('/lc/inventar/s10','Navigator@lcInventarS10');
+
+
+
 $gl=$gl . Router::get('/start','Navigator@start');
 
 $gl=$gl . Router::get('/login','Navigator@auth');

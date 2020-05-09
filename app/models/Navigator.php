@@ -20,9 +20,44 @@ class Navigator
   public static  function lc(){
     Show::way('lc','layoutlc');
   }
-  public static  function lcinventar(){
-    Show::way('lcinventar','layoutlc');
+
+  public static  function lcInventarItem(){
+    Show::way('lcInventarItem','layoutlc');
   }
+  public static  function lcInventarMoney(){
+    Show::way('lcInventarMoney','layoutlc');
+  }
+  public static  function lcInventarS1(){
+    Show::way('lcInventarS1','layoutlc');
+  }
+  public static  function lcInventarS2(){
+    Show::way('lcInventarS2','layoutlc');
+  }
+  public static  function lcInventarS3(){
+    Show::way('lcInventarS3','layoutlc');
+  }
+  public static  function lcInventarS4(){
+    Show::way('lcInventarS4','layoutlc');
+  }
+  public static  function lcInventarS5(){
+    Show::way('lcInventarS5','layoutlc');
+  }
+  public static  function lcInventarS6(){
+    Show::way('lcInventarS6','layoutlc');
+  }
+  public static  function lcInventarS7(){
+    Show::way('lcInventarS7','layoutlc');
+  }
+  public static  function lcInventarS8(){
+    Show::way('lcInventarS8','layoutlc');
+  }
+  public static  function lcInventarS9(){
+    Show::way('lcInventarS9','layoutlc');
+  }
+  public static  function lcInventarS10(){
+      Show::way('lcInventarS10', 'layoutlc');
+  }
+
   public  static function start(){
     Show::way('start','layout');
   }

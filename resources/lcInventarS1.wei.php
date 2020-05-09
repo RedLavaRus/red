@@ -1,6 +1,9 @@
 <?php
+
+include CFG::adres()."/function/McServerConfig.php";
+
 $content = '
- <h3 class="lc_head_h3"> Инвентарь</h3>
+ <h3 class="lc_head_h3"> Инвентарь сервера '.$Servers_config[0][0].'</h3>
 <div class="lc_inventar">
     <div class="lc_inventar_item" id="rar1"><img src="/img/items/1.png"><div class="lc_inventar_item_kol">862</div></div>
     <div class="lc_inventar_item" id="rar2"><img src="/img/items/2.png"><div class="lc_inventar_item_kol">62</div></div>

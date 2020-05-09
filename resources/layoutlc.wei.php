@@ -35,7 +35,17 @@ $fon_nam = rand(1,7);
         <div class="lc_box_menu_el1"> </div>
         <div class="lc_box_menu_element">Инвентарь частей</div>
         <div class="lc_box_menu_element">Инвентарь монет</div>
-        <div class="lc_box_menu_element">Инвентарь сервера Анархия</div>
+
+        <?php
+        $num_times = 1;
+        include CFG::adres()."/function/McServerConfig.php";
+        foreach($Servers_config as $item)
+        {
+            echo '<div class="lc_box_menu_element">'.'<a href="/lc/inventar/s'.$num_times.'">Инвентарь сервера '.$item[0].'</a></div>';
+            $num_times++;
+        }
+        unset($num_times);
+        ?>
         <div class="lc_box_menu_el1"> </div>
         <div class="lc_box_menu_element">Тех.поддержка</div>
         <div class="lc_box_menu_el1"> </div>
