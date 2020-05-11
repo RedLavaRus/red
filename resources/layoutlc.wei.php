@@ -10,6 +10,7 @@ $fon_nam = rand(1,7);
     <meta name="Keywords" content="<?php echo $seo['keyw'];?>"> 
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/css/app.css" >
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
         .line1{
             background: url("/thems/img/fon/fon<?php  echo $fon_nam;?>.png") no-repeat;

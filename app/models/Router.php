@@ -12,6 +12,11 @@ class Router
         Show::way('e404','layouterror');
         return;
       }
+      if($pattern == 'e428')
+      {
+        Show::way('e428','layouterror');
+        return;
+      }
       if($pattern == $res_url || $pattern1 == $res_url ){
         $func = explode('@', $func);
         $cla_na = $func[0];
@@ -30,6 +35,11 @@ class Router
       if($pattern == 'e404')
       {
         Show::way('e404','layouterror');
+        return;
+      }
+      if($pattern == 'e428')
+      {
+        Show::way('e428','layouterror');
         return;
       }
       // надо сравнить $pattern и текущий параметр юрл.

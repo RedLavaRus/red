@@ -9,7 +9,7 @@ class Inventar
         $sth = DB::pdo()->prepare("SELECT * FROM `invent` where 
         ((user_id = ?) and (`server` = ?))   ");
         $y=0;
-        $sth->execute(array($user_id,$server,));
+        $sth->execute(array($user_id,$server));
         while($array = $sth->fetch(PDO::FETCH_ASSOC))
         {
             if($array['data_udaleniya'] == null)
@@ -37,6 +37,31 @@ class Inventar
         
         return $arr_items;
         
+    }
+    public static function ShowItem($id_item)
+    {
+        $sth = DB::pdo()->prepare("SELECT * FROM `invent` where id=? limit 1");
+        
+        $sth->execute(array($id_item));
+       $array = $sth->fetch(PDO::FETCH_ASSOC);
+       return $array;
+    }
+    public static function ShowItemID($id_item)
+    {
+        $sth = DB::pdo()->prepare("SELECT * FROM `id_items` where id=? limit 1");
+        
+        $sth->execute(array($id_item));
+       $array = $sth->fetch(PDO::FETCH_ASSOC);
+       return $array;
+    }
+
+    public static function removeItem($id_item,$coll)
+    {
+        $sth = DB::pdo()->prepare("UPDATE `invent` SET collich = collich - ? WHERE id = ?");
+        
+        $sth->execute(array($coll,$id_item));
+      
+       return true;
     }
 
 }

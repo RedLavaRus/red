@@ -70,12 +70,18 @@ class Navigator
   public static  function e404(){
     Show::way('e404','layouterror');
   }
+  public static  function e428(){
+    Show::way('e428','layouterror');
+  }
   public static  function serversName($gets){
     Show::way('servers','layout',$gets);
   }
 
   public static  function servereOnline(){
-    Show::way('onlineShow','layoutnone','','resources/pageAjaxShow');
+    Show::way('onlineShow','layoutnone','','resources/pageAjaxShow'); 
+  }
+  public static  function servereShowMesActionInventar(){
+    Show::way('ShowMesActionInventar','layoutnone','','resources/pageAjaxShow'); 
   }
   public static  function servereRcom(){
     Show::way('giveShow','layoutnone','','resources/pageAjaxShow');
