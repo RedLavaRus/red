@@ -40,7 +40,7 @@ class CFG
     }
     public static  function mailPass()
     {
-        return '';
+        return '111';
     }
 }
 
