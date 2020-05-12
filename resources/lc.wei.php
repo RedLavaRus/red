@@ -1,6 +1,6 @@
 <?php
 $content = '
-
+<div class="answer" id="content1"></div>
 <h2>Управление акаунтом</h2>
 
 <div class="lc_main_content_box">
@@ -8,13 +8,13 @@ $content = '
 
     <div class="lc_main_content_el">
     <div class="lc_main_content_el_head">Баланс</div>
-    <div class="nlc_main_content_el_button">Пополнить</div>    
+    <div class="nlc_main_content_el_button">Пополнить</div>  
     </div>
 
 
     <div class="lc_main_content_el">
     <div class="lc_main_content_el_head">Почта</div>
-    <div class="nlc_main_content_el_button">Подтвердить</div>    
+    <a id="senMail"><div class="nlc_main_content_el_button">Подтвердить</div>   </a>   
     </div>
 
 
@@ -74,7 +74,23 @@ $content = '
 
 
 </div>
-
-
+<script>
+$("#senMail").click(function(){  
+    $.ajax({  
+        url:"/function/ShowMesActionMail", 
+        cache: false,  
+        success: function(html){  
+            $("#content1").html(html);  
+        }  
+    });  
+});  
+$(document).mouseup(function (e)
+{
+    var container = $("#shad");
+    if ((!container.is(e.target) && container.has(e.target).length === 0) ) {
+        $("#shad1").fadeOut(600, function(){});
+    }
+});
+</script>
 ';
 ?>

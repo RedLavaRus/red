@@ -709,6 +709,17 @@ body {
     text-align: center;
 }
 
+.action_windows_text_inp_big1 {
+    width: 325px;
+    height: 40px;
+    margin: 40px 10px 0 10px;
+    border: 1px solid #6d00dd;
+    font-size: 24px;
+    padding: 4px 10px 0 4px;
+    display: block;
+    text-align: center;
+}
+
 .action_windows_but_inp_big {
     width: 120px;
     height: 44px;

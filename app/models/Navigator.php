@@ -86,6 +86,13 @@ class Navigator
   public static  function servereRcom(){
     Show::way('giveShow','layoutnone','','resources/pageAjaxShow');
   }
+  public static  function servereShowMesActionMail(){
+    Show::way('ShowMesActionMail','layoutnone','','resources/pageAjaxShow');
+  }
+  public static  function serveremailTo(){
+    Show::way('mailTo','layoutnone','','resources/pageAjaxShow');
+  }
+  
   
   
 
