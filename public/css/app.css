@@ -727,3 +727,45 @@ body {
     border-radius: 5px 5px 0 0;
     padding: 50px 10px;
 }
+
+.lc_main_content_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lc_main_content_el {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+    width: 300px;
+    border: 1px solid #aeaeae;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px #c4c4c4;
+    background-color: #fff;
+}
+
+.lc_main_content_el_head {
+    width: 200px;
+    padding: 50px;
+    background-color: #6d00dd;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 5px 5px 0 0;
+}
+
+.lc_main_content_el_text {
+    padding: 0 20px;
+    margin: 15px 0;
+    text-align: left;
+    font-size: 18px;
+}
+
+.nlc_main_content_el_button {
+    width: 200px;
+    padding: 10px 20px;
+    margin: 20px auto 20px auto;
+    border: 1px solid #0e1c1f;
+    border-radius: 50px;
+    text-align: center;
+}

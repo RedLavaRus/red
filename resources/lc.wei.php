@@ -1,3 +1,80 @@
 <?php
-$content = 'content!';
+$content = '
+
+<h2>Управление акаунтом</h2>
+
+<div class="lc_main_content_box">
+
+
+    <div class="lc_main_content_el">
+    <div class="lc_main_content_el_head">Баланс</div>
+    <div class="nlc_main_content_el_button">Пополнить</div>    
+    </div>
+
+
+    <div class="lc_main_content_el">
+    <div class="lc_main_content_el_head">Почта</div>
+    <div class="nlc_main_content_el_button">Подтвердить</div>    
+    </div>
+
+
+    <div class="lc_main_content_el">
+    <div class="lc_main_content_el_head">Пароль</div>
+    <div class="nlc_main_content_el_button">Сменить</div>    
+    </div>
+</div>
+
+
+
+<h2>Сервера</h2>
+<div class="lc_main_content_box">
+    <div class="lc_main_content_el">
+        <div class="lc_main_content_el_head">Name_server</div>
+        <div class="lc_main_content_el_text">Уровень: 7</div>
+        <div class="lc_main_content_el_text">Клан: Admin</div>
+        <div class="lc_main_content_el_text">Убийств: 8</div>
+        <div class="lc_main_content_el_text">Времени на сервере:<br> 7 часов</div>
+        <div class="nlc_main_content_el_button">Телепорт на спавн</div>
+    </div>
+
+
+    <div class="lc_main_content_el">
+        <div class="lc_main_content_el_head">Name_server</div>
+        <div class="lc_main_content_el_text">Уровень: 7</div>
+        <div class="lc_main_content_el_text">Клан: Admin</div>
+        <div class="lc_main_content_el_text">Убийств: 8</div>
+        <div class="lc_main_content_el_text">Времени на сервере:<br> 7 часов</div>
+        <div class="nlc_main_content_el_button">Телепорт на спавн</div>
+    </div>
+
+
+
+    <div class="lc_main_content_el">
+        <div class="lc_main_content_el_head">Name_server</div>
+        <div class="lc_main_content_el_text">Уровень: 7</div>
+        <div class="lc_main_content_el_text">Клан: Admin</div>
+        <div class="lc_main_content_el_text">Убийств: 8</div>
+        <div class="lc_main_content_el_text">Времени на сервере:<br> 7 часов</div>
+        <div class="nlc_main_content_el_button">Телепорт на спавн</div>
+    </div>
+
+
+    <div class="lc_main_content_el">
+        <div class="lc_main_content_el_head">Name_server</div>
+        <div class="lc_main_content_el_text">Уровень: 7</div>
+        <div class="lc_main_content_el_text">Клан: Admin</div>
+        <div class="lc_main_content_el_text">Убийств: 8</div>
+        <div class="lc_main_content_el_text">Времени на сервере:<br> 7 часов</div>
+        <div class="nlc_main_content_el_button">Телепорт на спавн</div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+';
 ?>
