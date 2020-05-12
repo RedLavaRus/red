@@ -780,3 +780,24 @@ body {
     border-radius: 50px;
     text-align: center;
 }
+
+.mail_sys_res_box {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+.mail_sys_res_box_mas_s {
+    width: 600px;
+    padding: 50px;
+    border: 2px solid green;
+    font-size: 32px;
+    margin: auto;
+}
+
+.mail_sys_res_box_mas_r {
+    width: 600px;
+    padding: 50px;
+    border: 2px solid red;
+    font-size: 32px;
+    margin: auto;
+}

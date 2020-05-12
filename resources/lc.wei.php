@@ -90,7 +90,16 @@ $(document).mouseup(function (e)
     if ((!container.is(e.target) && container.has(e.target).length === 0) ) {
         $("#shad1").fadeOut(600, function(){});
     }
+}); 
+$(document).mouseup(function (e)
+{
+    var container = $("#shadA");
+    if ((!container.is(e.target) && container.has(e.target).length === 0) ) {
+        $("#shadA1").fadeOut(600, function(){});
+    }
 });
+
+
 </script>
 ';
 ?>

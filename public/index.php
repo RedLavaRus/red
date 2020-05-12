@@ -34,6 +34,7 @@ $gl=$gl . Router::get('/reg','Navigator@reg');
 $gl=$gl . Router::get('/test','Navigator@test');
 
 $gl=$gl . Router::getVar('/servers/?','Navigator@serversName');
+$gl=$gl . Router::getVar('/mailActivator/?','Navigator@mailActivator');
 
 
 

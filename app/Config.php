@@ -30,6 +30,18 @@ class CFG
     {
         return 'users';
     }
+    public static  function mailName()
+    {
+        return 'Алексей';
+    }
+    public static  function mailAdres()
+    {
+        return 'gakman@ya.ru';
+    }
+    public static  function mailPass()
+    {
+        return '';
+    }
 }
 
 ?>
