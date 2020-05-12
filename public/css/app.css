@@ -718,3 +718,12 @@ body {
     display: block;
     color: #6d00dd;
 }
+
+.action_windows1 {
+    width: 500px;
+    height: 70px;
+    margin: calc(50vh - 150px) calc(50vw - 250px);
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 50px 10px;
+}

@@ -16,7 +16,7 @@ $contentItemsShow = $contentItemsShow .$timed_x.$timed_x1.$timed_x2;
 $ajaxEcho=$ajaxEcho."
 $('#sen".$invMasteritem['id_item_inventar']."').click(function(){  
     $.ajax({  
-        url:'/function/ShowMesActionInventar?class=action&id=".$invMasteritem['id_item_inventar']."&img=".$invMasteritem['gl_id']."&name=".$invMasteritem['gl_name']."&coll=".$invMasteritem['collich']."', 
+        url:'/function/ShowMesActionInventar?class=action&id=".$invMasteritem['id_item_inventar']."&img=".$invMasteritem['gl_id']."&name=".$invMasteritem['gl_name']."&coll=".$invMasteritem['collich']."&idr=".$invMasteritem['id_Rcom']."', 
         cache: false,  
         success: function(html){  
             $('#content1').html(html);  
@@ -33,6 +33,13 @@ $(document).mouseup(function (e)
     var container = $('#shad');
     if ((!container.is(e.target) && container.has(e.target).length === 0) ) {
         $('#shad1').fadeOut(600, function(){});
+    }
+});
+$(document).mouseup(function (e)
+{
+    var container = $('#shadA');
+    if ((!container.is(e.target) && container.has(e.target).length === 0) ) {
+        $('#shadA1').fadeOut(600, function(){});
     }
 });
 ";
