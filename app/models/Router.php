@@ -76,11 +76,6 @@ class Router
     }
     public static function ajax($pattern,$func,$sl = 0,$col = 0,$authR = 0)
     {
-      if($authR != 0)
-      {
-        Show::way('e428','layouterror');
-        return;
-      }
           $res_url = explode('/',$_SERVER['REQUEST_URI']);
           $funct_names = explode('?', $res_url[2]);
           
@@ -92,6 +87,7 @@ class Router
           Show::way('e428','layouterror');
           return;
         }
+
               $func = explode('@', $func);
 
               $cla_na = $func[0];
@@ -103,6 +99,36 @@ class Router
       
               return "sys";
           }
+    }
+    public static function catalog($pattern,$func,$authR = 0)
+    {
+      
+      $rdd= "";
+      $xz = 0;
+      $res_url = explode('/',$_SERVER['REQUEST_URI']);
+      $pat = explode('/',$pattern);
+      foreach($pat as $pt)
+      {
+        if($pat[$xz] != $res_url[$xz]) $rdd = "error";
+        $xz++;
+      }
+      if($rdd == "")
+      {
+        if($authR != 0)
+        {
+          Show::way('e428','layouterror');
+          return;
+        }
+
+        $func = explode('@', $func);
+
+        $cla_na = $func[0];
+        $fun_na = $func[1];
+
+        $cla_na::$fun_na();
+        return "sys";
+
+      }
     }
 }
 ?>
