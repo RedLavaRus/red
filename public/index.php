@@ -37,6 +37,9 @@ $gl=$gl . Router::getVar('/servers/?','Navigator@serversName');
 $gl=$gl . Router::getVar('/mailActivator/?','Navigator@mailActivator');
 
 
+$gl=$gl . Router::get('/articles','Navigator@catalogBlander');
+
+
 
 if ($gl !="sys") 
 {

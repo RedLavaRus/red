@@ -103,6 +103,9 @@ class Navigator
   }
   
   
+  public static  function catalogBlander(){
+    Show::way('catalogBlander','layoutcatalog');
+  }
   
 
 
