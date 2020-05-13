@@ -801,3 +801,32 @@ body {
     font-size: 32px;
     margin: auto;
 }
+
+.action_windows_h1 {
+    width: 500px;
+    height: 340px;
+    margin: calc(50vh - 150px) calc(50vw - 250px);
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.action_windows_text_inp_big2 {
+    width: 425px;
+    height: 40px;
+    margin: 20px 25px 0px 25px;
+    border: 1px solid #6d00dd;
+    font-size: 24px;
+    padding: 4px 10px 0 4px;
+    display: block;
+    text-align: center;
+}
+
+.action_windows_but_inp_big1 {
+    width: 425px;
+    height: 44px;
+    margin: 20px 10px 0 30px;
+    border: 1px solid #6d00dd;
+    font-size: 16px;
+    display: block;
+    color: #6d00dd;
+}

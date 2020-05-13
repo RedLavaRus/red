@@ -95,6 +95,12 @@ class Navigator
   public static  function serveremailTo(){
     Show::way('mailTo','layoutnone','','resources/pageAjaxShow');
   }
+  public static  function servereShowMesActionPassword(){
+    Show::way('ShowMesActionPassword','layoutnone','','resources/pageAjaxShow');
+  }
+  public static  function serverepassTo(){
+    Show::way('passTo','layoutnone','','resources/pageAjaxShow');
+  }
   
   
   

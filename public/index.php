@@ -45,6 +45,8 @@ if ($gl !="sys")
     $gl=$gl . Router::ajax('/function/ShowMesActionInventar', 'Navigator@servereShowMesActionInventar', 'ShowMesActionInventar', '1');
     $gl=$gl . Router::ajax('/function/ShowMesActionMail', 'Navigator@servereShowMesActionMail', 'ShowMesActionMail', '1');
     $gl=$gl . Router::ajax('/function/mailTo', 'Navigator@serveremailTo', 'mailTo', '1');
+    $gl=$gl . Router::ajax('/function/ShowMesActionPassword', 'Navigator@servereShowMesActionPassword', 'ShowMesActionPassword', '1');
+    $gl=$gl . Router::ajax('/function/passTo', 'Navigator@serverepassTo', 'passTo', '1');
 }
 if($gl != "sys"){Router::get('e404','Navigator@e404');}
 ?>

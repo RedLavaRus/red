@@ -20,7 +20,7 @@ $content = '
 
     <div class="lc_main_content_el">
     <div class="lc_main_content_el_head">Пароль</div>
-    <div class="nlc_main_content_el_button">Сменить</div>    
+    <a id="senPass"><div class="nlc_main_content_el_button">Сменить</div>   </a> 
     </div>
 </div>
 
@@ -78,6 +78,15 @@ $content = '
 $("#senMail").click(function(){  
     $.ajax({  
         url:"/function/ShowMesActionMail", 
+        cache: false,  
+        success: function(html){  
+            $("#content1").html(html);  
+        }  
+    });  
+});  
+$("#senPass").click(function(){  
+    $.ajax({  
+        url:"/function/ShowMesActionPassword", 
         cache: false,  
         success: function(html){  
             $("#content1").html(html);  
