@@ -2,8 +2,9 @@
 class Router
 {
     public $status = false;
-    public static function get($pattern,$func)
+    public static function get($pattern,$func,$authR = 0)
     {
+
       $res_url = $_SERVER['REQUEST_URI'];
       $pattern1 = $pattern.'/';
       
@@ -18,6 +19,11 @@ class Router
         return;
       }
       if($pattern == $res_url || $pattern1 == $res_url ){
+        if($authR != 0 && (!isset($_SESSION['id'])))
+        {
+          Show::way('e428','layouterror');
+          return;
+        }
         $func = explode('@', $func);
         $cla_na = $func[0];
         $fun_na = $func[1];
@@ -27,8 +33,9 @@ class Router
       
 
     }
-    public static function getVar($pattern,$func)
+    public static function getVar($pattern,$func,$authR = 0)
     {
+  
       $res_url = $_SERVER['REQUEST_URI'];
       $pattern1 = $pattern.'/';
       
@@ -52,6 +59,11 @@ class Router
         if($url[2] == '?')
           {
             
+        if($authR != 0 && (!isset($_SESSION['id'])))
+        {
+          Show::way('e428','layouterror');
+          return;
+        }
             $func = explode('@', $func);
 
             $cla_na = $func[0];
@@ -62,13 +74,24 @@ class Router
           }
       }
     }
-    public static function ajax($pattern,$func,$sl = 0,$col = 0)
+    public static function ajax($pattern,$func,$sl = 0,$col = 0,$authR = 0)
     {
+      if($authR != 0)
+      {
+        Show::way('e428','layouterror');
+        return;
+      }
           $res_url = explode('/',$_SERVER['REQUEST_URI']);
           $funct_names = explode('?', $res_url[2]);
           
           if ($res_url[1] == 'function' && $funct_names[0]==$sl) 
           {
+
+        if($authR != 0 && (!isset($_SESSION['id'])))
+        {
+          Show::way('e428','layouterror');
+          return;
+        }
               $func = explode('@', $func);
 
               $cla_na = $func[0];

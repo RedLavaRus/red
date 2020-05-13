@@ -8,7 +8,7 @@ $gl=$gl . Router::get('/shop','Navigator@shop');
 $gl=$gl . Router::get('/servers','Navigator@servers');
 $gl=$gl . Router::get('/trade','Navigator@trade');
 $gl=$gl . Router::get('/banlist','Navigator@banlist');
-$gl=$gl . Router::get('/lc','Navigator@lc');
+$gl=$gl . Router::get('/lc','Navigator@lc','1');
 
 $gl=$gl . Router::get('/lc/inventar/items','Navigator@lcInventarItem');
 $gl=$gl . Router::get('/lc/inventar/money','Navigator@lcInventarMoney');
@@ -41,12 +41,12 @@ $gl=$gl . Router::getVar('/mailActivator/?','Navigator@mailActivator');
 if ($gl !="sys") 
 {
     $gl=$gl . Router::ajax('/function/online', 'Navigator@servereOnline', 'online', '1');
-    $gl=$gl . Router::ajax('/function/rcom', 'Navigator@servereRcom', 'rcom', '1');
-    $gl=$gl . Router::ajax('/function/ShowMesActionInventar', 'Navigator@servereShowMesActionInventar', 'ShowMesActionInventar', '1');
-    $gl=$gl . Router::ajax('/function/ShowMesActionMail', 'Navigator@servereShowMesActionMail', 'ShowMesActionMail', '1');
-    $gl=$gl . Router::ajax('/function/mailTo', 'Navigator@serveremailTo', 'mailTo', '1');
-    $gl=$gl . Router::ajax('/function/ShowMesActionPassword', 'Navigator@servereShowMesActionPassword', 'ShowMesActionPassword', '1');
-    $gl=$gl . Router::ajax('/function/passTo', 'Navigator@serverepassTo', 'passTo', '1');
+    $gl=$gl . Router::ajax('/function/rcom', 'Navigator@servereRcom', 'rcom', '1','1');
+    $gl=$gl . Router::ajax('/function/ShowMesActionInventar', 'Navigator@servereShowMesActionInventar', 'ShowMesActionInventar', '1','1');
+    $gl=$gl . Router::ajax('/function/ShowMesActionMail', 'Navigator@servereShowMesActionMail', 'ShowMesActionMail', '1','1');
+    $gl=$gl . Router::ajax('/function/mailTo', 'Navigator@serveremailTo', 'mailTo', '1','1');
+    $gl=$gl . Router::ajax('/function/ShowMesActionPassword', 'Navigator@servereShowMesActionPassword', 'ShowMesActionPassword', '1','1');
+    $gl=$gl . Router::ajax('/function/passTo', 'Navigator@serverepassTo', 'passTo', '1','1');
 }
 if($gl != "sys"){Router::get('e404','Navigator@e404');}
 ?>
