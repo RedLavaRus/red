@@ -24,5 +24,6 @@ include_once 'models/Rcom.php';
 include_once 'models/MailSmtp.php';
 include_once 'models/MailGeneatorSys.php';
 include_once 'models/MailGeneatorUrl.php';
+include_once 'models/UrlBox.php';
 
 ?>
