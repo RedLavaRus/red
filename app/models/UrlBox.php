@@ -21,6 +21,7 @@ class UrlBox{
             $dir[$dd]['type'] = $array['type'];
             $dir[$dd]['gateID'] = $array['gateID'];
             $dir[$dd]['nameS'] = $array['nameS'];
+            $dir[$dd]['name'] = $array['name'];
             $dd++;
         }
         //$direct['lvl1']
@@ -32,6 +33,7 @@ class UrlBox{
                 $direct['lvl1'][$qq] = $dir[$zz]['id'];
                 $gateID['lvl1'][$qq] = $dir[$zz]['gateID'];
                 $nameS['lvl1'][$qq] = $dir[$zz]['nameS'];
+                $name['lvl1'][$qq] = $dir[$zz]['name'];
                 $qq++;
             }
             $zz++;
@@ -49,6 +51,7 @@ class UrlBox{
                         $direct['lvl2'][$qq] = $dir[$zz]['id'];
                         $gateID['lvl2'][$qq] = $dir[$zz]['gateID'];
                         $nameS['lvl2'][$qq] = $dir[$zz]['nameS'];
+                        $name['lvl2'][$qq] = $dir[$zz]['name'];
                         $qq++;
                     }
                 }
@@ -69,6 +72,7 @@ class UrlBox{
                         $direct['lvl3'][$qq] = $dir[$zz]['id'];
                         $gateID['lvl3'][$qq] = $dir[$zz]['gateID'];
                         $nameS['lvl3'][$qq] = $dir[$zz]['nameS'];
+                        $name['lvl3'][$qq] = $dir[$zz]['name'];
                         $qq++;
                     }
                 }
@@ -89,6 +93,7 @@ class UrlBox{
                         $direct['lvl4'][$qq] = $dir[$zz]['id'];
                         $gateID['lvl4'][$qq] = $dir[$zz]['gateID'];
                         $nameS['lvl4'][$qq] = $dir[$zz]['nameS'];
+                        $name['lvl4'][$qq] = $dir[$zz]['name'];
                         $qq++;
                     }
                 }
@@ -109,6 +114,7 @@ class UrlBox{
                         $direct['lvl5'][$qq] = $dir[$zz]['id'];
                         $gateID['lvl5'][$qq] = $dir[$zz]['gateID'];
                         $nameS['lvl5'][$qq] = $dir[$zz]['nameS'];
+                        $name['lvl5'][$qq] = $dir[$zz]['name'];
                         $qq++;
                     }
                 }
@@ -122,6 +128,7 @@ class UrlBox{
         $arrEnd['id'] = $direct;
         $arrEnd['gateID'] = $gateID;
         $arrEnd['nameS'] = $nameS;
+        $arrEnd['name'] = $name;
         $arrEnd['dd']=$dd;
         return $arrEnd;
     }
@@ -130,6 +137,7 @@ class UrlBox{
             $direct=$array['id'];
             $gateID=$array['gateID'];
             $nameS=$array['nameS'];
+            $name=$array['name'];
             $dd=$array['dd'];
         //print_r($arrEnd);
        // echo "<br><br>";
@@ -145,6 +153,7 @@ class UrlBox{
             {
                 //echo $nameS['lvl1'][$zz] .'<br>';
                 $table[$Xline][1] = $nameS['lvl1'][$zz];
+                $tableN[$Xline][1] = $name['lvl1'][$zz];
                 $tableD[$Xline][1] = $direct['lvl1'][$zz];
                 $tableI[$Xline][1] = $gateID['lvl1'][$zz];
                 $Xline++;
@@ -155,6 +164,7 @@ class UrlBox{
                     {
                         //echo '--'.$nameS['lvl2'][$zz1] .'<br>';
                         $table[$Xline][2] = $nameS['lvl2'][$zz1];
+                        $tableN[$Xline][2] = $name['lvl2'][$zz1];
                         $tableD[$Xline][2] = $direct['lvl2'][$zz1];
                         $tableI[$Xline][2] = $gateID['lvl2'][$zz1];
                         $Xline++;
@@ -165,6 +175,7 @@ class UrlBox{
                             {
                                 //echo '----'.$nameS['lvl3'][$zz2] .'<br>';
                                 $table[$Xline][3] = $nameS['lvl3'][$zz2];
+                                $tableN[$Xline][3] = $name['lvl3'][$zz2];
                                 $tableD[$Xline][3] = $direct['lvl3'][$zz2];
                                 $tableI[$Xline][3] = $gateID['lvl3'][$zz2];
                                 $Xline++;
@@ -175,6 +186,7 @@ class UrlBox{
                                     {
                                         //echo '------'.$nameS['lvl4'][$zz3] .'<br>';
                                         $table[$Xline][4] = $nameS['lvl4'][$zz3];
+                                        $tableN[$Xline][4] = $name['lvl4'][$zz3];
                                         $tableD[$Xline][4] = $direct['lvl4'][$zz3];
                                         $tableI[$Xline][4] = $gateID['lvl4'][$zz3];
                                         $Xline++;
@@ -185,6 +197,7 @@ class UrlBox{
                                                 {
                                                     //echo '--------'.$nameS['lvl5'][$zz3] .'<br>';
                                                     $table[$Xline][5] = $nameS['lvl5'][$zz4];
+                                                    $tableN[$Xline][5] = $name['lvl5'][$zz4];
                                                     $tableD[$Xline][5] = $direct['lvl5'][$zz4];
                                                     $tableI[$Xline][5] = $gateID['lvl5'][$zz4];
                                                     $Xline++;
@@ -209,6 +222,7 @@ class UrlBox{
         $arraW['table']=$table;
         $arraW['direct']=$tableD;
         $arraW['id']=$tableD;
+        $arraW['name']=$tableN;
         return $arraW;
         /*
                                                     $table[$Xline][5] = $nameS['lvl5'][$zz4];

@@ -14,7 +14,9 @@ while ($ttr123qwe != 10)
 }
 //print_r($re_url);
 $timed = UrlBox::SeachMyDirect();
+//print_r($timed);
 $menuTable= UrlBox::SeachMyDirectAll($timed);
+//print_r($menuTable);
 $echo_menu ='';
 $lastLvl1='';
 $lastLvl2='';
@@ -43,7 +45,7 @@ $fx=0;
                 {
                     $img ='papkaclose80blue';
                 }
-                $echo_menu .= '<a href="'.$addStartUrl.'/'.$menuTable['table'][$fx][1].'/"><div class="catalog_zone_menu_el_lvl1"><img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['table'][$fx][1]."</div></a>";
+                $echo_menu .= '<a href="'.$addStartUrl.'/'.$menuTable['table'][$fx][1].'/"><div class="catalog_zone_menu_el_lvl1"><img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][1]."</div></a>";
                 if( isset($re_url[0]) && ($re_url[0] == $menuTable['table'][$fx][1]))
                 {
                     $lastLvl1="start";
@@ -74,7 +76,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$menuTable['table'][$fx][2].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['table'][$fx][2]."</div></a>";
+                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$menuTable['table'][$fx][2].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][2]."</div></a>";
                     if ( isset($re_url[1]) && ($re_url[1] == $menuTable['table'][$fx][2] ) &&($re_url[1] != ''))
                     {
                         $lastLvl2="start";
@@ -103,7 +105,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$lts2.'/'.$menuTable['table'][$fx][3].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['table'][$fx][3]."</div>";
+                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$lts2.'/'.$menuTable['table'][$fx][3].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][3]."</div>";
                     if (isset($re_url[2]) && ($re_url[2] == $menuTable['table'][$fx][3])&&($re_url[2] != '')) 
                     {
                         $lastLvl3="start";
@@ -131,7 +133,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['table'][$fx][4]."</div>";
+                    $echo_menu .= '<div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][4]."</div>";
                     if (isset($re_url[3]) && ($re_url[3] == $menuTable['table'][$fx][4]) )
                     {
                         $lastLvl4="start";
@@ -159,7 +161,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['table'][$fx][5]."</div>";
+                    $echo_menu .= '<div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][5]."</div>";
                 }
             }
             else
@@ -167,6 +169,30 @@ $fx=0;
                 
             } 
             $fx++;
+        }
+        if(!isset($re_url))$re_url=null;
+        $res_con_box = UrlContent::contentDirect($re_url,$menuTable);
+        $der=0;
+        $echo_main_box_f='';
+        //print_r($res_con_box);
+        while($res_con_box['itog'] != $der)
+        {
+            if(isset($res_con_box[$der]['type']) && $res_con_box[$der]['type']=='direct')
+            {
+                $echo_main_box_f .= '<div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">'.$res_con_box[$der]['name'].'</div>';
+                
+            }
+            $der++;
+        }
+        $der=0;
+        while($res_con_box['itog'] != $der)
+        {
+            if( $res_con_box[$der]['type']=='file')
+            {
+                $echo_main_box_f .= '<div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/text80blue.png">'.$res_con_box[$der]['name'].'<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div>';
+                
+            }
+            $der++;
         }
 $content = '
  <div class="catalog_zone">
@@ -176,13 +202,7 @@ $content = '
     
     </div>
     <div class="catalog_zone_main">
-        <div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">Публикации41</div>
-        <div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">Публикации42</div>
-        <div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">Публикации43</div>
-        <div class="catalog_zone_main_nmfile"><img src="/thems/img/ico/catalog/text80blue.png">Фаил41<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div>
-        <div class="catalog_zone_main_nmfile"><img src="/thems/img/ico/catalog/text80blue.png">Фаил41<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div>
-        <div class="catalog_zone_main_nmfile"><img src="/thems/img/ico/catalog/text80blue.png">Фаил41<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div>
-        <hr>
+        '.$echo_main_box_f.'<hr>
         <h1>name_stat</h1>
         <div class="catalog_zone_main_point">point 1</div>
         <div class="catalog_zone_main_point">point 1</div>
