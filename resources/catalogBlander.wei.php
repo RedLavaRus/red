@@ -228,7 +228,10 @@ $fx=0;
                 $hleb_kr.=$arr_Dr['lvl5']['name'].' / ' ;
             }
             
-            $echo_main_box_f .= UrlTextShow::showFile($re_url,$menuTable);
+            
+            $ressss = UrlTextShow::showFile($re_url,$menuTable,$timed);
+            if($ressss['type']=='direct' && $echo_main_box_f == '') $echo_main_box_f='Папка пуста';
+            $echo_main_box_f .=  $ressss['text'];
 $content = '
 <div class="url_bord">
 '.$hleb_kr.'
