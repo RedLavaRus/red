@@ -939,3 +939,10 @@ body {
     margin: 0 20px 5px 20px;
     border-left: 5px solid #aaa;
 }
+
+.url_bord {
+    width: 1100px;
+    padding: 10px 48px;
+    margin: 10px auto;
+    font-size: 18px;
+}

@@ -159,6 +159,11 @@ class UrlContent{
 
 
     }
+    public  static  function conDirectOrFile($re_url,$table){
+        print_r($re_ur);
+        echo "<br>";
+        print_r($table);
+    }
 }
 
 

@@ -175,26 +175,41 @@ $fx=0;
         $der=0;
         $echo_main_box_f='';
         //print_r($res_con_box);
-        while($res_con_box['itog'] != $der)
+        if (isset($res_con_box[$der]['type']) && $res_con_box[$der]['idPar'] == 0) 
         {
-            if(isset($res_con_box[$der]['type']) && $res_con_box[$der]['type']=='direct')
-            {
-                $echo_main_box_f .= '<div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">'.$res_con_box[$der]['name'].'</div>';
-                
-            }
-            $der++;
+            $addurl = "/"."articles/";
         }
-        $der=0;
-        while($res_con_box['itog'] != $der)
+        else
         {
-            if( $res_con_box[$der]['type']=='file')
-            {
-                $echo_main_box_f .= '<div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/text80blue.png">'.$res_con_box[$der]['name'].'<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div>';
-                
-            }
-            $der++;
+            $addurl='';
         }
+            while ($res_con_box['itog'] != $der) 
+            {
+                if (isset($res_con_box[$der]['type']) && $res_con_box[$der]['type']=='direct') 
+                {
+                    
+                    $echo_main_box_f .= '<a href="'.$addurl.$res_con_box[$der]['nameS'].'/"><div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">'.$res_con_box[$der]['name'].'</div></a>';
+                }
+                $der++;
+            }
+            $der=0;
+            while ($res_con_box['itog'] != $der) 
+            {
+                if ($res_con_box[$der]['type']=='file') 
+                {
+                    $echo_main_box_f .= '<a href="'.$addurl.$res_con_box[$der]['nameS'].'/"><div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/text80blue.png">'.$res_con_box[$der]['name'].'<p>Каждый из нас понимает очевидную вещь: разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность переосмысления внешнеэкономических политик. </p></div></a>';
+                }
+                $der++;
+            }
+            UrlContent::conDirectOrFile($re_url,$menuTable);
+            
 $content = '
+<div class="url_bord">
+home / 
+article / 
+wiki / 
+mods
+</div>
  <div class="catalog_zone">
     <div class="catalog_zone_menu">
     <div class="catalog_zone_menu_el_lvl0"> </div>
