@@ -221,7 +221,7 @@ class UrlBox{
         }
         $arraW['table']=$table;
         $arraW['direct']=$tableD;
-        $arraW['id']=$tableD;
+        $arraW['id']=$tableI;
         $arraW['name']=$tableN;
         return $arraW;
         /*

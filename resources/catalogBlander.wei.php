@@ -76,7 +76,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$menuTable['table'][$fx][2].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][2]."</div></a>";
+                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$menuTable['table'][$fx][2].'/"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][2]."</div></a>";
                     if ( isset($re_url[1]) && ($re_url[1] == $menuTable['table'][$fx][2] ) &&($re_url[1] != ''))
                     {
                         $lastLvl2="start";
@@ -105,7 +105,7 @@ $fx=0;
                     { 
                         $img ='papkaclose80blue';
                     }
-                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$lts2.'/'.$menuTable['table'][$fx][3].'"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][3]."</div>";
+                    $echo_menu .= '<a href="'.$addStartUrl.'/'.$lts1.'/'.$lts2.'/'.$menuTable['table'][$fx][3].'/"><div class="catalog_zone_menu_el_lvl1">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/thems/img/ico/catalog/'.$img.'.png">'.$menuTable['name'][$fx][3]."</div>";
                     if (isset($re_url[2]) && ($re_url[2] == $menuTable['table'][$fx][3])&&($re_url[2] != '')) 
                     {
                         $lastLvl3="start";
@@ -177,11 +177,11 @@ $fx=0;
         //print_r($res_con_box);
         if (isset($res_con_box[$der]['type']) && $res_con_box[$der]['idPar'] == 0) 
         {
-            $addurl = "/"."articles/";
+            $addurl = $_SERVER['REQUEST_URI'];
         }
         else
         {
-            $addurl='';
+            $addurl=$_SERVER['REQUEST_URI'];
         }
             while ($res_con_box['itog'] != $der) 
             {
@@ -189,10 +189,12 @@ $fx=0;
                 {
                     
                     $echo_main_box_f .= '<a href="'.$addurl.$res_con_box[$der]['nameS'].'/"><div class="catalog_zone_main_nmdir"><img src="/thems/img/ico/catalog/papkaclose80blue.png">'.$res_con_box[$der]['name'].'</div></a>';
+                    
                 }
                 $der++;
             }
             $der=0;
+            
             while ($res_con_box['itog'] != $der) 
             {
                 if ($res_con_box[$der]['type']=='file') 
@@ -201,14 +203,35 @@ $fx=0;
                 }
                 $der++;
             }
-            UrlContent::conDirectOrFile($re_url,$menuTable);
+
+            $arr_Dr=UrlContent::conDirectOrFile($res_url,$timed);
             
+            $hleb_kr = '<a href="/articles/">Каталог / </a>';
+            if(isset($res_url[2]) && $arr_Dr['lvl1']['nameS']==$res_url[2] && isset($arr_Dr['lvl1']['nameS'])) 
+            {
+                $hleb_kr.='<a href="/articles/'.$arr_Dr['lvl1']['nameS'].'/">'.$arr_Dr['lvl1']['name'].' / </a>' ;
+            }
+            if(isset($res_url[3]) &&isset($arr_Dr['lvl2']['nameS'])&& $res_url[3] != '' && $arr_Dr['lvl2']['nameS']==$res_url[3]) 
+            {
+                $hleb_kr.='<a href="/articles/'.$arr_Dr['lvl1']['nameS'].'/'.$arr_Dr['lvl2']['nameS'].'/">'.$arr_Dr['lvl2']['name'].' / ' ;
+            }
+            if(isset($res_url[4]) &&isset($arr_Dr['lvl3']['nameS'])&& $res_url[4] != '' && $arr_Dr['lvl3']['nameS'] == $res_url[4]) 
+            {
+                $hleb_kr.='<a href="/articles/'.$arr_Dr['lvl1']['nameS'].'/'.$arr_Dr['lvl2']['nameS'].'/'.$arr_Dr['lvl3']['nameS'].'/">'.$arr_Dr['lvl3']['name'].' / ' ;
+            }
+            if(isset($res_url[5]) &&isset($arr_Dr['lvl4']['nameS'])&& $res_url[5] != '' && $arr_Dr['lvl4']['nameS'] == $res_url[5]) 
+            {
+                $hleb_kr.=$arr_Dr['lvl4']['name'].' / ' ;
+            }
+            if(isset($res_url[6]) &&isset($arr_Dr['lvl5']['nameS'])&& $res_url[6] != '' && $arr_Dr['lvl5']['nameS'] == $res_url[6]) 
+            {
+                $hleb_kr.=$arr_Dr['lvl5']['name'].' / ' ;
+            }
+            
+            $echo_main_box_f .= UrlTextShow::showFile($re_url,$menuTable);
 $content = '
 <div class="url_bord">
-home / 
-article / 
-wiki / 
-mods
+'.$hleb_kr.'
 </div>
  <div class="catalog_zone">
     <div class="catalog_zone_menu">
@@ -218,30 +241,7 @@ mods
     </div>
     <div class="catalog_zone_main">
         '.$echo_main_box_f.'<hr>
-        <h1>name_stat</h1>
-        <div class="catalog_zone_main_point">point 1</div>
-        <div class="catalog_zone_main_point">point 1</div>
-        <div class="catalog_zone_main_point">point 1</div>
-        <div class="catalog_zone_main_point">point 1</div>
-        <div class="catalog_zone_main_point">point 1</div>
-        <h3>yewtruyewtruew</h3>
-        <p>
-fsdf sdf sdf sdfsdfkjs alkjj asdhf asdkf ahdslfjh dsahfuewy fhshdf shafjkas dhfahs dfjhsalf sadjfhsdajhflasdhfjsah l
-
-
-        </p>
-        <h3>yewtruyewtruew</h3>
-        <p>
-fsdf sdf sdf sdfsdfkjs alkjj asdhf asdkf ahdslfjh dsahfuewy fhshdf shafjkas dhfahs dfjhsalf sadjfhsdajhflasdhfjsah l
-
-
-        </p>
-        <h3>yewtruyewtruew</h3>
-        <p>
-fsdf sdf sdf sdfsdfkjs alkjj asdhf asdkf ahdslfjh dsahfuewy fhshdf shafjkas dhfahs dfjhsalf sadjfhsdajhflasdhfjsah l
-
-
-        </p>
+        
     </div>
     <div class="catalog_zone_aside">
         <div class="banner"> </div>

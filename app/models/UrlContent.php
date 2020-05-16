@@ -160,9 +160,98 @@ class UrlContent{
 
     }
     public  static  function conDirectOrFile($re_url,$table){
-        print_r($re_ur);
-        echo "<br>";
-        print_r($table);
+        //print_r($re_url);
+        //echo "<br>";
+        //print_r($table);
+        //echo "<br>";
+        $x = 0;
+        $y=0;
+        while($x != 10)
+        {
+            if(isset($re_url[$x])) 
+            {
+                $last = $re_url[$x];
+                $y++;
+            }
+
+            $x++;
+        }
+        $father = 0;
+        $z =0;
+        $res['lvl0']['father'] = 0;
+        $res['lvl0']['id'] = 0;
+        $res['lvl0']['name'] = 0;
+        $res['lvl0']['names'] = 0;
+        /*while($z != $y)
+        {
+            $d=$z+1;
+            $ds=$z+2;
+            $r='lvl'.$d;
+            $rs='lvl'.$ds;
+            if(($table['Par'][$rs] == $table['id'][$r]) &&($table['nameS'][$rs] == $re_url[$d])){echo $re_url[$d];}
+            print_r( $table['nameS'][$rs]);
+            $res[$rs]['father'] = 1;
+            $res[$rs]['id'] = 1;
+            $res[$rs]['name'] = 1;
+            $res[$rs]['s'] = 1;
+
+
+
+
+                $z++;
+        }
+        */
+        //echo $table['dd'];
+        $ch=0;
+        while($table['dd'] != $ch)
+        {
+            if(isset($table['nameS']['lvl1'][$ch])&&isset($re_url[2])&&$table['nameS']['lvl1'][$ch] == $re_url[2] ){
+                
+                $resulted['lvl1']['nameS'] = $table['nameS']['lvl1'][$ch];
+                $resulted['lvl1']['name'] = $table['name']['lvl1'][$ch];
+                $resulted['lvl1']['id'] = $table['id']['lvl1'][$ch];
+                $resulted['lvl1']['father'] = $table['Par']['lvl1'][$ch];            
+            }
+            $ch++;
+        }
+        $ch=0;
+        while($table['dd'] != $ch)
+        {
+            if(isset($table['nameS']['lvl2'][$ch]) && isset($re_url[3]) && $table['nameS']['lvl2'][$ch] == $re_url[3] && $table['Par']['lvl2'][$ch] ==$resulted['lvl1']['id'] ){
+               
+                $resulted['lvl2']['nameS'] = $table['nameS']['lvl2'][$ch];
+                $resulted['lvl2']['name'] = $table['name']['lvl2'][$ch];
+                $resulted['lvl2']['id'] = $table['id']['lvl2'][$ch];
+                $resulted['lvl2']['father'] = $table['Par']['lvl2'][$ch];            
+            }
+            $ch++;
+        }
+        $ch=0;
+        while($table['dd'] != $ch)
+        {
+            if(isset($table['nameS']['lvl3'][$ch]) && isset($re_url[4]) && $table['nameS']['lvl3'][$ch] == $re_url[4] && $table['Par']['lvl3'][$ch] ==$resulted['lvl2']['id']  ){
+               
+                $resulted['lvl3']['nameS'] = $table['nameS']['lvl3'][$ch];
+                $resulted['lvl3']['name'] = $table['name']['lvl3'][$ch];
+                $resulted['lvl3']['id'] = $table['id']['lvl3'][$ch];
+                $resulted['lvl3']['father'] = $table['Par']['lvl3'][$ch];            
+            }
+            $ch++;
+        }
+        $ch=0;
+        while($table['dd'] != $ch)
+        {
+            if(isset($table['nameS']['lvl4'][$ch]) && isset($re_url[5]) && $table['nameS']['lvl4'][$ch] == $re_url[5] && $table['Par']['lvl4'][$ch] ==$resulted['lvl3']['id']  ){
+               
+                $resulted['lvl4']['nameS'] = $table['nameS']['lvl4'][$ch];
+                $resulted['lvl4']['name'] = $table['name']['lvl4'][$ch];
+                $resulted['lvl4']['id'] = $table['id']['lvl4'][$ch];
+                $resulted['lvl4']['father'] = $table['Par']['lvl4'][$ch];            
+            }
+            $ch++;
+        }
+        if(!isset($resulted))return null;
+        return $resulted;
     }
 }
 

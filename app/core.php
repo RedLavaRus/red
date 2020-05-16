@@ -26,5 +26,6 @@ include_once 'models/MailGeneatorSys.php';
 include_once 'models/MailGeneatorUrl.php';
 include_once 'models/UrlBox.php';
 include_once 'models/UrlContent.php';
+include_once 'models/UrlTextShow.php';
 
 ?>
