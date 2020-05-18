@@ -16,6 +16,8 @@
     <?php echo $content;?>
     
 </div>
+
+<?php include CFG::adres()."resources/box/footer.php"; ?>
 </body>
 </html>
 <?php exit;?>

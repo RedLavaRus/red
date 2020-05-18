@@ -1,4 +1,5 @@
-<div class="line1_head_menu">
+<header>
+<nav class="line1_head_menu">
         <div class="line1_head_menu_logo"><a href="/">SkyVoxel</a></div>
         <div class="line1_head_menu_logo1"><a href="/shop/">Магазин</a></div>
         <div class="line1_head_menu_logo1"><a href="/servers/">Сервера</a></div>
@@ -35,3 +36,4 @@
                     }
                 ?>
     </div>
+    </header>

@@ -246,7 +246,7 @@ $content = '
         '.$echo_main_box_f.'<hr>
         
     </div>
-    <div class="catalog_zone_aside">
+    <aside class="catalog_zone_aside">
         <div class="banner"> </div>
 
         <div class="catalog_zone_menu_el_lvl1"><big>Похожие статьи</big></div>

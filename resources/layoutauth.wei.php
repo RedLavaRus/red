@@ -14,7 +14,8 @@
 <?php include CFG::adres()."resources/box/header.php"; ?>
     
     <?php echo $content;?>
-    
+ 
+<?php include CFG::adres()."resources/box/footer.php"; ?>   
 </div>
 </body>
 </html>
