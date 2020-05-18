@@ -1,6 +1,8 @@
 <?php
+
 include_once '../app/core.php';
 
+//Guard::aL(2);
 
 $gl='';
 $gl=$gl . Router::get('/','Navigator@index');

@@ -35,5 +35,5 @@
                 <?php
                     }
                 ?>
-    </div>
+    </nav>
     </header>

@@ -82,6 +82,67 @@ class Guard
         return $string;
 
     }
+    public  static  function aL($lvl)
+    {
+
+        if($lvl==0)//<--
+        {
+            
+           return true;
+        }
+        if ($lvl==1) //<--
+        {
+            echo 1;
+            if (isset($_SESSION['id']) &&  $_SESSION['id']>= 1) 
+            {
+                return true;
+            }
+            else
+            {
+                Router::get('e428','Navigator@e428');
+                exit();
+            }
+        }
+        if ($lvl==2) //<--
+        {
+            echo 2;
+            if (isset($_SESSION['id']) &&  $_SESSION['id']>= 1) 
+            {
+
+                $sth = DB::pdo()->prepare("SELECT * FROM `users` where id=? LIMIT 1");
+                $sth->execute(array($_SESSION['id']));
+                $array = $sth->fetch(PDO::FETCH_ASSOC);
+                if($array['grp']=='admin')
+                {
+                    return true;
+                }
+                else
+                {
+                    Router::get('e428','Navigator@e428');
+                    exit();
+                }
+            }
+            else
+            {
+                Router::get('e428','Navigator@e428');
+                exit();
+            }
+        }
+        
+    }
+    public  static  function a1L($lvl)
+    {
+        if(Guard::access($lvl) == true)
+        {
+            return true;
+        }
+        else
+        {
+
+            Router::get('e428','Navigator@e428');
+            exit();
+        }
+    }
 }
 
 
