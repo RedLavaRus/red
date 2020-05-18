@@ -39,6 +39,8 @@ $gl=$gl . Router::getVar('/mailActivator/?','Navigator@mailActivator');
 
 $gl=$gl . Router::catalog('/articles','Navigator@catalogBlander');
 
+$gl=$gl . Router::catalog('/rss','Navigator@rss');
+
 
 
 if ($gl !="sys") 

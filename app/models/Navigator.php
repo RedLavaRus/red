@@ -73,6 +73,9 @@ class Navigator
   public static  function e428(){
     Show::way('e428','layouterror');
   }
+  public static  function rss(){
+    Show::way('rss','layoutnone');
+  }
   public static  function serversName($gets){
     Show::way('servers','layout',$gets);
   }
