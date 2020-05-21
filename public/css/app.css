@@ -946,3 +946,76 @@ body {
     margin: 10px auto;
     font-size: 18px;
 }
+
+.main_support_block {
+    width: 100%;
+    display: flex;
+}
+
+.support_new_box {
+    flex: 430px;
+    max-width: 430px;
+    padding: 10px;
+}
+
+.support_old_box {
+    flex: auto;
+}
+
+.sup_it_sel {
+    width: 400px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.sup_it_text {
+    width: 390px;
+    padding: 5px;
+    margin: 10px;
+    height: 150px;
+}
+
+.sup_it_text1 {
+    width: 390px;
+    padding: 5px;
+    margin: 10px;
+    height: 50px;
+}
+
+.sup_it_but {
+    width: 403px;
+    padding: 5px;
+    margin: 10px;
+    height: 40px;
+}
+
+.sup_it_file {
+    width: 403px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.support_blo_zd_box {
+    padding: 0px;
+    margin: 10px;
+    border: 2px solid #999;
+    width: calc(100% - 24px);
+}
+
+.support_blo_zd_title {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-bottom: 1px solid #faa14d;
+    background-color: #f7c698;
+}
+
+.support_blo_zd_thems {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.support_blo_zd_text {
+    width: calc(100% - 20px);
+    padding: 10px;
+    min-height: 110px;
+}

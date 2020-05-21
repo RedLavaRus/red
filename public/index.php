@@ -24,6 +24,7 @@ $gl=$gl . Router::get('/lc/inventar/s7','Navigator@lcInventarS7');
 $gl=$gl . Router::get('/lc/inventar/s8','Navigator@lcInventarS8');
 $gl=$gl . Router::get('/lc/inventar/s9','Navigator@lcInventarS9');
 $gl=$gl . Router::get('/lc/inventar/s10','Navigator@lcInventarS10');
+$gl=$gl . Router::get('/lc/support','Navigator@lcSupport');
 
 
 

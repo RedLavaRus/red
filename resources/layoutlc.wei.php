@@ -31,7 +31,7 @@ $fon_nam = rand(1,7);
 <div class="lc_box">
     <div class="lc_box_menu">
         <div class="lc_box_menu_el1"> </div>
-        <div class="lc_box_menu_element">Основное</div>
+        <div class="lc_box_menu_element"><a href="/lc/">Основное</a></div>
         <div class="lc_box_menu_element">Скин и плащ</div>
         <div class="lc_box_menu_el1"> </div>
         <div class="lc_box_menu_element">Инвентарь частей</div>
@@ -48,7 +48,7 @@ $fon_nam = rand(1,7);
         unset($num_times);
         ?>
         <div class="lc_box_menu_el1"> </div>
-        <div class="lc_box_menu_element">Тех.поддержка</div>
+        <div class="lc_box_menu_element"><a href="/lc/support">Тех.поддержка</a></div>
         <div class="lc_box_menu_el1"> </div>
         <div class="lc_box_menu_element">Прокачка</div>
         <div class="lc_box_menu_element">Фермы</div>
