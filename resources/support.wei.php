@@ -1,4 +1,5 @@
 <?php
+$msg=Functions::showSuppordZDAll();
 $content = '
 <div class="main_support_block">
     <div class="support_new_box">
@@ -23,30 +24,7 @@ $content = '
                 </form>
     </div>
     <div class="support_old_box">
-        <div class="support_blo_zd_box">
-            <div class="support_blo_zd_title">Заявка номер [а-000101].</div>
-            <div class="support_blo_zd_thems">Баг в лаунчере.</div>
-            <div class="support_blo_zd_text"> При авторизации, пишет что я забанен, хотя я не читерил, решилите!<br><br></div>
-            <div class="support_blo_zd_thems"> В обработке.</div>
-        </div>
-        <div class="support_blo_zd_box">
-            <div class="support_blo_zd_title">Заявка номер [а-000101].</div>
-            <div class="support_blo_zd_thems">Баг в лаунчере.</div>
-            <div class="support_blo_zd_text"> При авторизации, пишет что я забанен, хотя я не читерил, решилите!<br><br></div>
-            <div class="support_blo_zd_thems"> В обработке.</div>
-        </div>
-        <div class="support_blo_zd_box">
-            <div class="support_blo_zd_title">Заявка номер [а-000101].</div>
-            <div class="support_blo_zd_thems">Баг в лаунчере.</div>
-            <div class="support_blo_zd_text"> При авторизации, пишет что я забанен, хотя я не читерил, решилите!<br><br></div>
-            <div class="support_blo_zd_thems"> В обработке.</div>
-        </div>
-        <div class="support_blo_zd_box">
-            <div class="support_blo_zd_title">Заявка номер [а-000101].</div>
-            <div class="support_blo_zd_thems">Баг в лаунчере.</div>
-            <div class="support_blo_zd_text"> При авторизации, пишет что я забанен, хотя я не читерил, решилите!<br><br></div>
-            <div class="support_blo_zd_thems"> В обработке.</div>
-        </div>
+        '.$msg.'
     </div>
 
 </div>

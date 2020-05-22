@@ -63,6 +63,41 @@ class Functions{
         );
         $sth1->execute(array($user_id,$time,$type_zd,$text,$filename,$contacts,$status,$comments));
     }
+    public  static  function showSuppordZDAll($max = 30)
+    {
+        $msg = '';
+        $dd=0;
+        $user_id = $_SESSION['id'];
+        $sth = DB::pdo()->prepare("SELECT * FROM `support` where (user_id = ? and status!=?)");
+        $sth->execute(array($user_id,"delete"));
+        while($array = $sth->fetch(PDO::FETCH_ASSOC))
+        {
+
+            if($array['id']<100000) $dl='0';
+            if($array['id']<10000) $dl='00';
+            if($array['id']<1000) $dl='000';
+            if($array['id']<100) $dl='0000';
+            if($array['id']<10) $dl='00000';
+            $namber_zd ='A-'.$dl.$array['id'];
+            $msg .='<div class="support_blo_zd_box">';
+            $msg .='<div class="support_blo_zd_title">Заявка номер ['.$namber_zd.'].</div>';
+            $msg .='<div class="support_blo_zd_thems">'.$array['type_zd'].'.</div>';
+            $msg .='<div class="support_blo_zd_text">'.$array['text'].'</div>';
+            $msg .='<div class="support_blo_zd_thems">'.$array['status'].'.</div>';
+            $msg .='</div>';
+
+            $dd++;
+            if($dd == $max) break;
+        }
+        if ($dd!=0) 
+        {
+            return $msg;
+        }
+        else
+        {
+            return 'История обращений пуста!';
+        }
+    }
 }
 
 
