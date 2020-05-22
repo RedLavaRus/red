@@ -110,7 +110,12 @@ class Navigator
   public static  function supportTo(){
     Show::way('supportTo','layoutnone','','resources/pageAjaxShow');
   }
-  
+  public static  function supportOpen(){
+    Show::way('supportOpen','layoutnone','','resources/pageAjaxShow');
+  }
+  public static  function supportDelete(){
+    Show::way('supportDelete','layoutnone','','resources/pageAjaxShow');
+  }
   
   public static  function catalogBlander(){
     Show::way('catalogBlander','layoutcatalog');

@@ -66,6 +66,7 @@ class Functions{
     public  static  function showSuppordZDAll($max = 30)
     {
         $msg = '';
+        $ajs ='';
         $dd=0;
         $user_id = $_SESSION['id'];
         $sth = DB::pdo()->prepare("SELECT * FROM `support` where (user_id = ? and status!=?)");
@@ -80,15 +81,37 @@ class Functions{
             if($array['id']<10) $dl='00000';
             $namber_zd ='A-'.$dl.$array['id'];
             $msg .='<div class="support_blo_zd_box">';
-            $msg .='<div class="support_blo_zd_title">Заявка номер ['.$namber_zd.'].</div>';
+            $msg .='<div class="support_blo_zd_title">Заявка номер ['.$namber_zd.'] <a id="open'.$array['id'].'">(Открыть)</a><a id="delete'.$array['id'].'"> (Удалить)</a></div>';
             $msg .='<div class="support_blo_zd_thems">'.$array['type_zd'].'.</div>';
             $msg .='<div class="support_blo_zd_text">'.$array['text'].'</div>';
             $msg .='<div class="support_blo_zd_thems">'.$array['status'].'.</div>';
             $msg .='</div>';
-
+            $ajs .='
+            $("#open'.$array['id'].'").click(function() {    
+                $.ajax({
+                    url: "/function/supportOpen/?id='.$array['id'].'",
+                    cache: false,
+                    success: function(html){
+                        $("#results").html(html);
+                    }
+                });
+            });
+            $("#delete'.$array['id'].'").click(function() {    
+                $.ajax({
+                    url: "/function/supportDelete/?id='.$array['id'].'",
+                    cache: false,
+                    success: function(html){
+                        $("#results").html(html);
+                    }
+                });
+                window.location.reload();
+            });
+';
             $dd++;
             if($dd == $max) break;
         }
+        $adj='<script type="text/javascript" language="javascript">'. $ajs."</script>";
+        $msg.=$adj;
         if ($dd!=0) 
         {
             return $msg;
