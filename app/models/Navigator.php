@@ -107,6 +107,9 @@ class Navigator
   public static  function serverepassTo(){
     Show::way('passTo','layoutnone','','resources/pageAjaxShow');
   }
+  public static  function supportTo(){
+    Show::way('supportTo','layoutnone','','resources/pageAjaxShow');
+  }
   
   
   public static  function catalogBlander(){

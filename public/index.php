@@ -55,6 +55,7 @@ if ($gl !="sys")
     $gl=$gl . Router::ajax('/function/mailTo', 'Navigator@serveremailTo', 'mailTo', '1','1');
     $gl=$gl . Router::ajax('/function/ShowMesActionPassword', 'Navigator@servereShowMesActionPassword', 'ShowMesActionPassword', '1','1');
     $gl=$gl . Router::ajax('/function/passTo', 'Navigator@serverepassTo', 'passTo', '1','1');
+    $gl=$gl . Router::ajax('/function/supportTo', 'Navigator@supportTo', 'supportTo', '1','1');
 }
 if($gl != "sys"){Router::get('e404','Navigator@e404');}
 ?>
