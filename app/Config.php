@@ -42,6 +42,11 @@ class CFG
     {
         return '111222';
     }
+    public static  function sizeZDinDay()
+    {
+        return 3;
+    }
+
 }
 
 ?>

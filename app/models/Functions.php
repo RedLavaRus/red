@@ -69,7 +69,7 @@ class Functions{
         $ajs ='';
         $dd=0;
         $user_id = $_SESSION['id'];
-        $sth = DB::pdo()->prepare("SELECT * FROM `support` where (user_id = ? and status!=?)");
+        $sth = DB::pdo()->prepare("SELECT * FROM `support` where (user_id = ? and status!=?) ORDER BY id DESC ");
         $sth->execute(array($user_id,"delete"));
         while($array = $sth->fetch(PDO::FETCH_ASSOC))
         {
